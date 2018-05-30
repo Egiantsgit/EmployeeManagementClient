@@ -1,4 +1,6 @@
+import { DatasharedService } from './../datashared.service';
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
-
+loggedUsedData: any;
+  constructor(private route: ActivatedRoute, private dataService: DatasharedService) {
+    this.loggedUsedData = this.dataService.datafromLogin;
+  }
   ngOnInit() {
   }
 

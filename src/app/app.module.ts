@@ -4,6 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+
+
+
 import {
   SocialLoginModule,
   AuthServiceConfig,
@@ -25,14 +33,31 @@ export function getAuthServiceConfigs() {
   );
   return config;
 }
+
+const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  }
+];
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
 ],
   imports: [
     BrowserModule,
-    SocialLoginModule
+    SocialLoginModule,
+    HttpClientModule,
+    HttpModule,
+    RouterModule.forRoot(
+      appRoutes)
   ],
   providers: [
     {
