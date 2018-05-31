@@ -1,6 +1,10 @@
 {
   "Candidate": [
     {
+    "response": [{
+      "code": "50000",
+      "message": "Valid Registered User."
+    }],
       "EmailID": "ravidgd@gmail.com",
       "UUID": {
         "id": "0018335447",

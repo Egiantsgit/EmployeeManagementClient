@@ -2,7 +2,6 @@ import { DatasharedService } from './../datashared.service';
 import { AutheticationProfileServiceService } from '../AutheticationProfileService.service';
 import { Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-
 import {
   AuthService,
   FacebookLoginProvider,
@@ -49,9 +48,14 @@ export class LoginComponent implements OnInit {
         this.autheticationProfileServiceService.getLoggedUserData()
         .subscribe(
           (loggeddata: any) => {
-            this.data = loggeddata,
+            if (loggeddata.Candidate[0].response[0].code === '200') {
             this.dataService.datafromLogin = loggeddata;
             this.router.navigate(['/home']);
+           }
+            if (loggeddata.Candidate[0].response[0].code === '50000') {
+            this.dataService.datafromLogin = loggeddata;
+            this.router.navigate(['/signup']);
+           }
           }
         );
       }

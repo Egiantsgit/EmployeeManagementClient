@@ -1,17 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-
-
-
+import { SignupComponent } from './signup/signup.component';
 import {
   SocialLoginModule,
   AuthServiceConfig,
@@ -37,19 +32,19 @@ export function getAuthServiceConfigs() {
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'signup', component: SignupComponent },
   { path: '',
     redirectTo: '/login',
     pathMatch: 'full'
   }
 ];
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
 ],
   imports: [
     BrowserModule,
