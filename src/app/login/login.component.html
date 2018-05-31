@@ -1,20 +1,16 @@
 <h3>Vendor Sheet Management</h3>
 <h3>Login</h3>
 <div class="center">
-
     <div class="row">     
       <div class="col-md-4">
         <div>
           <label for="username">UserName</label>
-          <input type="text" class="form-control" name="username" />
-  
-        </div>
-  
+          <input type="text" class="form-control" name="username" /> 
+        </div> 
         <div>
           <label for="password">Password</label>
           <input type="password" class="form-control" name="password" />
         </div>
-  
         <div id="submit">
           <button class="btn btn-primary">Submit</button>
         </div>  
@@ -31,4 +27,30 @@
       </div>  
       </div> 
     </div> 
+    <div class="container"   *ngIf="isModelTrigger">
+		
+        <!-- Trigger the modal with a button -->
+        <!-- <button type="button" class="btn fade" data-toggle="modal" data-target="#myModal"></button> -->
+        
+        <!-- Modal -->
+        <div class="modal show" id="myModal" role="dialog">
+          <div class="modal-dialog">
+          
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"></h4>
+            </div>
+              <div class="modal-body">
+               <p><b>{{ errres }}</b></p> 
+               <p>{{ errcode }}</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)='closeClicked()'>Close</button>
+            </div>
+          </div>         
+          </div>
+        </div>        
+        </div>
   </div>

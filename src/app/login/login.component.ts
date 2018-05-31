@@ -24,6 +24,9 @@ export class LoginComponent implements OnInit {
   firstName: any;
   lastName: any;
   dob: any;
+  errres: any;
+  errcode: any;
+  isModelTrigger: boolean;
   constructor( private socialAuthService: AuthService,
               private autheticationProfileServiceService: AutheticationProfileServiceService,
               private router: Router,
@@ -32,7 +35,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  closeClicked() {
+    this.isModelTrigger = false;
+  }
   public socialSignIn(socialPlatform: string) {
     let socialPlatformProvider;
     if (socialPlatform === 'facebook') {
@@ -56,10 +61,14 @@ export class LoginComponent implements OnInit {
             this.dataService.datafromLogin = loggeddata;
             this.router.navigate(['/signup']);
            }
+           if (loggeddata.Candidate[0].response[0].code === '401') {
+            this.isModelTrigger = true;
+            this.errres = 'Error Message: ' + loggeddata.Candidate[0].response[0].message;
+            this.errcode = 'Error Code: ' + loggeddata.Candidate[0].response[0].code;
+           }
           }
         );
       }
     );
   }
-
 }
