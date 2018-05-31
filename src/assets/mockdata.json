@@ -2,7 +2,7 @@
   "Candidate": [
     {
     "response": [{
-      "code": "200",
+      "code": "50000",
       "message": "Valid Registered User."
     }],
       "EmailID": "ravidgd@gmail.com",

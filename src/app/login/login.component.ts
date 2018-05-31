@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
   errres: any;
   errcode: any;
   isModelTrigger: boolean;
+  isSignupTrigger: boolean;
   constructor( private socialAuthService: AuthService,
               private autheticationProfileServiceService: AutheticationProfileServiceService,
               private router: Router,
@@ -37,6 +38,10 @@ export class LoginComponent implements OnInit {
 
   closeClicked() {
     this.isModelTrigger = false;
+  }
+
+  signUpClicked() {
+    this.isSignupTrigger = false;
   }
   public socialSignIn(socialPlatform: string) {
     let socialPlatformProvider;
@@ -59,7 +64,8 @@ export class LoginComponent implements OnInit {
            }
             if (loggeddata.Candidate[0].response[0].code === '50000') {
             this.dataService.datafromLogin = loggeddata;
-            this.router.navigate(['/signup']);
+            this.isSignupTrigger = true;
+            // this.router.navigate(['/signup']);
            }
            if (loggeddata.Candidate[0].response[0].code === '401') {
             this.isModelTrigger = true;
