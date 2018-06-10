@@ -1,0 +1,6 @@
+.container{
+    background: linear-gradient(to right,rgb(252, 140, 66),rgb(231, 96, 5), rgb(121, 34, 0));
+    /* background: rgb(231, 96, 5); */
+    width: 100%;
+    text-align: center;
+}

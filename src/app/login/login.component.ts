@@ -64,8 +64,8 @@ export class LoginComponent implements OnInit {
            }
             if (loggeddata.Candidate[0].response[0].code === '50000') {
             this.dataService.datafromLogin = loggeddata;
-            this.isSignupTrigger = true;
-            // this.router.navigate(['/signup']);
+            // this.isSignupTrigger = true;
+            this.router.navigate(['/signup']);
            }
            if (loggeddata.Candidate[0].response[0].code === '401') {
             this.isModelTrigger = true;

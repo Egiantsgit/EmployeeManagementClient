@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container">
+<h4>Vendor List</h4>
+<button type="button" class="btn btn-info" (click) = "toggleVendorForm()"><i class="fa fa-plus"></i> Add </button>
+<app-vendor *ngIf="vendorToggelClicked" [vendorid]=selectedVendor></app-vendor>
+<table class="table table-dark" style="margin-top:10px">
+  <thead>
+    <tr class="info">
+      <th>ID</th>
+      <th>ClientName</th>
+      <th>VendorName</th>
+      <th>VendorEmailID</th>
+      <th>Location</th>
+      <th>ProjectDescription</th>
+      <th>comments</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vendor of vendorlist">
+      <td>{{vendor.id}}</td>
+      <td>{{vendor.ClientName}}</td>
+      <td>{{vendor.VendorName}}</td>
+      <td>{{vendor.EmailID}}</td>
+      <td>{{vendor.Location}}</td>
+      <td>{{vendor.ProjectDescription}}</td>
+      <td>{{vendor.comments}}</td>
+      <td><i class="fa fa-edit" (click) = "editVendorForm(vendor.id)"></i></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+

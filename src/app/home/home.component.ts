@@ -9,8 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 loggedUsedData: any;
-  constructor(private route: ActivatedRoute, private dataService: DatasharedService) {
-    this.loggedUsedData = this.dataService.datafromLogin;
+  constructor() {
   }
   ngOnInit() {
   }

@@ -1,6 +1,20 @@
-.jumbotron{
+
+ #container{
     width: 500px;
-    margin-left: 450px;
-    padding-left: 20px;
-    margin-top: 150px;
+    background-color: aqua;
+    padding: 8px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 20px #333;
 }
+
+#shadows{
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    text-align: center;
+} 
+
+
+
+
+

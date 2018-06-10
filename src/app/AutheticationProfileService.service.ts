@@ -12,7 +12,6 @@ constructor(private http: HttpClient) { }
 
 getLoggedUserData(): any {
   return this.http.get('assets/mockdata.json');
-
 }
 
 }

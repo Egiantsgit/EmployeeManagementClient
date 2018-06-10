@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <!-- Nav tabs -->
+            <div class="card">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li>
+                        <a data-toggle="tab" [routerLink]="['/register']">Personal Information</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/education']">Educational Information</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/immigration']">Immigration</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/work']">Work Experience</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content" style="margin-top: 20px;">
+                    <div role="tabpanel" class="tab-pane active" id="PersonalInformation">
+                        <form class="form-horizontal" [formGroup]="personalInfo">
+                            <div class="form-group">
+                                <label for="FullName" class="col-md-3 control-label">Full Name</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Full Name" formControlName="fullName" required>
+                                    <span class="help-block" *ngIf="(personalInfo.get('fullName').touched || personalInfo.get('fullName').dirty)">
+                                        <!-- <span *ngIf="personalInfo.get('fullName').errors.required"></span>
+                                                      Please enter full name
+                                                       </span> -->
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob" class="col-md-3 control-label">Date of birth</label>
+                                <div class="col-md-6">
+                                    <input type="date" id="dob" class="form-control input-sm" placeholder="Date Of Birth" formControlName="dateOfBirth" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-md-3 control-label">Gender</label>
+                                <div class="col-md-9">
+                                    <input type="radio" value="male" formControlName="gender"> Male
+                                    <input type="radio" value="female" formControlName="gender"> Female
+                                    <input type="radio" value="other" formControlName="gender"> Other
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="maritalstatus" class="col-md-3 control-label">Marital Status</label>
+                                <div class="col-md-9">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" value="Married" formControlName="maritalStatus">Married</label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" value="Single" formControlName="maritalStatus">Single</label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" value="Divorced" formControlName="maritalStatus">Divorced</label>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="Country" class="col-md-3 control-label">Country</label>
+                                <div class="col-md-9">
+                                    <select formControlName="nationality">
+                                        <option [ngValue]="country" *ngFor="let country of countries">{{country}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="CurrentAddress" class="col-md-3 control-label">Current Address</label>
+                                <div class="col-md-6">
+                                    <textarea class="form-control" rows="3" id="CurrentAddress" formControlName="currentAddress"></textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="PerminentAddress" class="col-md-3 control-label">Perminent Address</label>
+                                <div class="col-md-6">
+                                    <textarea class="form-control" rows="3" id="PerminentAddress" formControlName="perminentAddress"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <!-- Button -->
+                                <div class="col-md-offset-3 col-md-6">
+                                    <button id="btn-signup" type="button" class="btn btn-info" (click)="savePersonalInfo()">
+                                        <i class="icon-hand-right"></i>Save</button>
+                                    <button *ngIf="personalInfoSaved" id="btn-signup" type="button" class="btn btn-info" style="margin-left: 20px" (click)="nextClicked()">
+                                        <i class="icon-hand-right"></i>
+                                        <a href="#EducationalInformation" aria-controls="EducationalInformation" data-toggle="tab">Next</a>
+                                    </button>
+                                    <!-- <a href="#WorkExperience" *ngIf="navigateToNext"></a> -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,19 @@
+footer{
+    background: linear-gradient(to right,rgb(252, 140, 66),rgb(231, 96, 5), rgb(121, 34, 0));
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+footer nav{
+    padding: 10px;
+}
+
+footer nav ul li{
+    display: inline;
+}
+
+footer nav ul{
+    text-align: center;
+}
