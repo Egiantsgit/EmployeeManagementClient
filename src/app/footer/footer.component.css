@@ -1,9 +1,10 @@
 footer{
-    background: linear-gradient(to right,rgb(252, 140, 66),rgb(231, 96, 5), rgb(121, 34, 0));
     position: fixed;
     bottom: 0;
-    width: 100%;
-    color: black;
+    color: #383838;
+    background-color: #383838;
+    width: 1200px;
+  
 }
 
 footer nav{

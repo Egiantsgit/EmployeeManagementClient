@@ -1,6 +1,5 @@
-.jumbotron{
-    width: 500px;
-    margin: 40px auto;
-    padding-left: 20px;
-    margin-top: 50px;
+.container{
+ height: 150px;
+ border: solid 1px;
+ text-align: center;
 }

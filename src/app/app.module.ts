@@ -1,3 +1,4 @@
+import { MarketingComponent } from './welcome/marketing/marketing.component';
 import { EducationComponent } from './education/education.component';
 import { VendorComponent } from './vendor-sheet/vendor/vendor.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,14 +27,15 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
 // import {FileUploadModule} from 'primeng/primeng';
 
 import {
-
-
-
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
   FacebookLoginProvider,
 } from 'angular5-social-login';
+import { TodoListComponent } from './welcome/todo-list/todo-list.component';
+import { PayrollComponent } from './welcome/payroll/payroll.component';
+import { DashboardComponent } from './welcome/dashboard/dashboard.component';
+import { PendingRequestComponent } from './welcome/pending-request/pending-request.component';
 
 
 export function getAuthServiceConfigs() {
@@ -85,7 +87,12 @@ const appRoutes: Routes = [
     RegisterComponent,
     EducationComponent,
     ImmigrationComponent,
-    WorkExperienceComponent
+    WorkExperienceComponent,
+    TodoListComponent,
+    PayrollComponent,
+    MarketingComponent,
+    DashboardComponent,
+    PendingRequestComponent
 ],
   imports: [
     BrowserModule,
