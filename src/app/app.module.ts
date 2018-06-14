@@ -1,6 +1,10 @@
+import { MarketingnavComponent } from './navigation/marketingnav/marketingnav.component';
+import { TasksComponent } from './navigation/tasks/tasks.component';
+import { PayrollnavComponent } from './navigation/payrollnav/payrollnav.component';
+import { TimesheetComponent } from './navigation/timesheet/timesheet.component';
+import { StatusreportComponent } from './navigation/statusreport/statusreport.component';
+import { RequestusComponent } from './navigation/requestus/requestus.component';
 import { MarketingComponent } from './welcome/marketing/marketing.component';
-import { EducationComponent } from './education/education.component';
-import { VendorComponent } from './vendor-sheet/vendor/vendor.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -11,18 +15,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { VendorSheetComponent } from './vendor-sheet/vendor-sheet.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material/material.module';
 import {MaterialComponent } from './material/material.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
-import { ImmigrationComponent } from './immigration/immigration.component';
-import { WorkExperienceComponent } from './work-experience/work-experience.component';
+
 
 // import {FileUploadModule} from 'primeng/primeng';
 
@@ -57,12 +57,14 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'education', component: EducationComponent},
-  { path: 'vendorsheet', component: VendorSheetComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'contact', component: ContactComponent },
-  {path: 'immigration', component: ImmigrationComponent},
-  {path: 'work', component: WorkExperienceComponent},
+  {path: 'payroll', component: PayrollnavComponent},
+  {path: 'marketing', component: MarketingnavComponent},
+  {path: 'tasks', component: TasksComponent},
+  {path: 'requestus', component: RequestusComponent},
+  {path: 'timesheet', component: TimesheetComponent},
+  {path: 'statusreport', component: StatusreportComponent},
+
   { path: '',
     redirectTo: '/login',
     pathMatch: 'full'
@@ -76,23 +78,24 @@ const appRoutes: Routes = [
     LoginComponent,
     SignupComponent,
     NavbarComponent,
-    VendorSheetComponent,
     ProfileComponent,
-    ContactComponent,
-    AboutComponent,
     FooterComponent,
     HeaderComponent,
-    VendorComponent,
     MaterialComponent,
     RegisterComponent,
-    EducationComponent,
-    ImmigrationComponent,
-    WorkExperienceComponent,
     TodoListComponent,
     PayrollComponent,
     MarketingComponent,
     DashboardComponent,
-    PendingRequestComponent
+    PendingRequestComponent,
+    MarketingComponent,
+    PayrollComponent,
+    RequestusComponent,
+    StatusreportComponent,
+    TimesheetComponent,
+    PayrollnavComponent,
+    TasksComponent,
+    MarketingnavComponent
 ],
   imports: [
     BrowserModule,

@@ -1,10 +1,9 @@
-footer{
+/* footer{
     position: fixed;
     bottom: 0;
     color: #383838;
-    background-color: #383838;
-    width: 1200px;
-  
+    background-color:black;
+    width: 2000px;
 }
 
 footer nav{
@@ -17,4 +16,10 @@ footer nav ul li{
 
 footer nav ul{
     text-align: center;
+} */
+
+footer {
+    width: 2000px;
+    height: 250px;
+    background-color: 	#333738;
 }
