@@ -1,11 +1,8 @@
-<!-- <app-navbar></app-navbar>
-<div class="jumbotron">
-  <h5><u><b>Your details:</b></u></h5>
-    <h5><b>Email:</b> {{loggedUsedData.Candidate[0].EmailID}}</h5>
-    <h5><b>First Name:</b> {{loggedUsedData.Candidate[0].demographic.name.firstName}}</h5>
-    <h5><b>Last Name:</b> {{loggedUsedData.Candidate[0].demographic.name.lastName}}</h5>
-    <h5><b>DOB:</b> {{loggedUsedData.Candidate[0].demographic.dateOfBirth}}</h5>
-</div> -->
 <div class="container">
- <h1>Hi Babu Rao</h1>
+  <div class= "name">
+       HI {{profileData.Candidate | uppercase}}
+  </div>
+  <div class="dateandID">
+     <span id="date" style="color: #219DE5">Last Login:</span> {{ today | date: 'short' }}  <span style="padding: 10px;"> |  </span>    <span id="id" style="color: #219DE5">Employee ID:</span> {{profileData.EmployeeID}}
+  </div>
 </div>

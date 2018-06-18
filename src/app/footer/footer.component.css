@@ -20,6 +20,12 @@ footer nav ul{
 
 footer {
     width: 2000px;
-    height: 250px;
-    background-color: 	#333738;
+    height: 40px;
+    background-color:black;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
 }
+
+
+

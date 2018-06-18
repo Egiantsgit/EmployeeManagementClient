@@ -1,0 +1,15 @@
+{
+    "dashboarddata": [{
+        "label": "In Complete Calls",
+        "data": 710
+    },
+    {
+        "label": "Interview",
+        "data": 160
+
+    },
+    {
+        "label": "Final Round Interviews",
+        "data": 130
+    }]
+}

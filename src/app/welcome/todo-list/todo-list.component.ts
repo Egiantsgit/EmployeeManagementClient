@@ -1,3 +1,4 @@
+import { TodolistdataService } from './../../shared/todolistdata.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
+todoTasks: any[];
+overdueTasks: any[];
 
-  constructor() { }
+  constructor(private listData: TodolistdataService) { }
 
   ngOnInit() {
+    this.listData.getToDoListData().subscribe(
+      (data: any) => {
+        this.todoTasks = data.todotasks;
+        this.overdueTasks = data.overduetasks;
+      }
+    );
   }
 
 }

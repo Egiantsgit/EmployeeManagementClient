@@ -4,3 +4,12 @@
     width: 100%;
     text-align: Left;
 }
+
+.heading {
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.subhead {
+    color: #219DE5;
+}

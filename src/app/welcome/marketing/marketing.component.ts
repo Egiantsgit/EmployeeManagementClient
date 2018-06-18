@@ -1,3 +1,4 @@
+import { VendorcalldataService } from './../../shared/vendorcalldata.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./marketing.component.css']
 })
 export class MarketingComponent implements OnInit {
-
-  constructor() { }
+  vendorcalls: any;
+  constructor(private vendorcallData: VendorcalldataService) { }
 
   ngOnInit() {
+    this.vendorcallData.getVendorCallData().subscribe(
+      (data: any) => {
+        this.vendorcalls = data.calldata;
+      }
+    );
   }
 
 }

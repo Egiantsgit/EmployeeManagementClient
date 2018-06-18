@@ -22,6 +22,7 @@ import { MaterialModule } from './material/material.module';
 import {MaterialComponent } from './material/material.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 
 // import {FileUploadModule} from 'primeng/primeng';
@@ -36,6 +37,7 @@ import { TodoListComponent } from './welcome/todo-list/todo-list.component';
 import { PayrollComponent } from './welcome/payroll/payroll.component';
 import { DashboardComponent } from './welcome/dashboard/dashboard.component';
 import { PendingRequestComponent } from './welcome/pending-request/pending-request.component';
+import { HomeFooterComponent } from './home-footer/home-footer.component';
 
 
 export function getAuthServiceConfigs() {
@@ -95,7 +97,8 @@ const appRoutes: Routes = [
     TimesheetComponent,
     PayrollnavComponent,
     TasksComponent,
-    MarketingnavComponent
+    MarketingnavComponent,
+    HomeFooterComponent
 ],
   imports: [
     BrowserModule,
@@ -106,7 +109,8 @@ const appRoutes: Routes = [
     MaterialModule,
     ReactiveFormsModule,
     RouterModule.forRoot(
-      appRoutes)
+      appRoutes),
+    ChartsModule
   ],
   providers: [
     {
