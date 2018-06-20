@@ -1,13 +1,73 @@
-.nav {
-    border: solid #219DE5;
+/* .nav {
+    background-color: #219DE5;
+    overflow: hidden;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 }
 
-ul {
+
+
+
+.nav ul {
+    text-align: center;
+}
+
+.nav ul li {
+    list-style: none;
+    width: 10em;
+  /* float: left removes any possibility of it centering */
+    /* display: inline-block;
+}
+
+li {
+    position: relative;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    line-height: 1.3em;
+    padding: 1em;
+    text-align: center;
+  }
+
+  li a:link {
+    text-decoration: none;
+  }
+  
+  li a:visited {
+    text-decoration: none;
+    color: white;
+  }
+
+li a:active {
+  background-color: dimgray;
+}
+
+
+  
+
+.nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+/* .active {
+    background-color: #4CAF50;
+    color: white;
+} */ 
+
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #219DE5;
+    width: 100%;
+    display: block;
 }
 
 li {
@@ -20,12 +80,34 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-     margin-left:50px;
+    margin-left:50px;
     margin-right: 50px; 
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+/* li a:hover {
     background-color: lightblue;
+/* } */ 
+
+
+.navbar-custom {
+
+    background-color :#219DE5;
+    color: white;
+
 }
+
+li a {
+    color: white;
+
+}
+
+li{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.navbar-nav {
+    color: white;
+} 
 
