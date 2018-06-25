@@ -43,10 +43,6 @@ import { HomeFooterComponent } from './home-footer/home-footer.component';
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     [{
-      id: FacebookLoginProvider.PROVIDER_ID,
-      provider: new FacebookLoginProvider('190506228435014')
-    },
-      {
         id: GoogleLoginProvider.PROVIDER_ID,
         provider: new GoogleLoginProvider('832976957531-ufljq94h91ej37l3an2ouprfm4pmcmt7.apps.googleusercontent.com')
       },
