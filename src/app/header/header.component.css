@@ -1,15 +1,6 @@
 .container{
-    
-    /* background: rgb(231, 96, 5); */
     width: 100%;
     text-align: Left;
+    padding: 10px;
 }
 
-.heading {
-    font-size: 40px;
-    margin-left: 40px;
-}
-
-.subhead {
-    color: #219DE5;
-}
