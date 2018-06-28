@@ -23,7 +23,7 @@ pipeline{
         
         stage("Package"){            
                 steps{                    
-                        sh "sh  ng build --prod"
+                        sh "ng build --prod"
                     
                 }
         }        
