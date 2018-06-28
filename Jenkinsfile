@@ -34,7 +34,7 @@ pipeline{
                 steps{
                       sh "docker login --username egiantsdocker --password Egaints#1"        	
                       sh "docker build -t employeemanagementclient ."
-                      sh "docker push egiantsdocker/employeemangementclient"
+                      sh "docker push egiantsdocker/employeemanagementclient"
                     
                 }
         }
