@@ -38,11 +38,18 @@ import { PayrollComponent } from './welcome/payroll/payroll.component';
 import { DashboardComponent } from './welcome/dashboard/dashboard.component';
 import { PendingRequestComponent } from './welcome/pending-request/pending-request.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
+// import { SubmitACallComponent } from './navigation/marketingnav/submit-a-call/submit-a-call.component';
+// import { SearchACallComponent } from './navigation/marketingnav/search-a-call/search-a-call.component';
+import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     [{
+      id: FacebookLoginProvider.PROVIDER_ID,
+      provider: new FacebookLoginProvider('190506228435014')
+    },
+      {
         id: GoogleLoginProvider.PROVIDER_ID,
         provider: new GoogleLoginProvider('832976957531-ufljq94h91ej37l3an2ouprfm4pmcmt7.apps.googleusercontent.com')
       },
@@ -62,6 +69,8 @@ const appRoutes: Routes = [
   {path: 'requestus', component: RequestusComponent},
   {path: 'timesheet', component: TimesheetComponent},
   {path: 'statusreport', component: StatusreportComponent},
+  // {path: 'submit-a-call', component: SubmitACallComponent},
+  // {path: 'search-a-call', component: SearchACallComponent},
 
   { path: '',
     redirectTo: '/login',
@@ -94,7 +103,10 @@ const appRoutes: Routes = [
     PayrollnavComponent,
     TasksComponent,
     MarketingnavComponent,
-    HomeFooterComponent
+    HomeFooterComponent,
+    // SubmitACallComponent,
+    // SearchACallComponent,
+    UpcomingEventsComponent
 ],
   imports: [
     BrowserModule,

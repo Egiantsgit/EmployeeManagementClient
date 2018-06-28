@@ -1,0 +1,67 @@
+{
+  "eventdata":[
+      {
+         "date": "Jun 25",
+         "vendorName": "TEK Systems",
+         "vendorContactperson": "Nikhil",
+         "contactNumber": "123-456-7890",
+         "contactEmailid": "1@gmail.com",
+         "status": "active",
+         "implementationPartner": "tcs",
+         "client": "Walmart",
+         "comments": "urgent requirement",
+         "callType": "Skype",
+         "numberOfrounds": "2",
+         "description": " Performing Specification, Design, Coding, Testing,Documentation in the areas of Development and maintenance"
+         
+
+      },
+      {
+        "date": "Jun 26",
+        "vendorName": "Clarus Group",
+        "vendorContactperson": "Nikhil",
+        "contactNumber": "123-456-7890",
+        "contactEmailid": "1@gmail.com",
+        "status": "active",
+        "implementationPartner": "tcs",
+        "client": "United Health Care",
+        "comments": "urgent requirement",
+        "callType": "Phone",
+        "numberOfrounds": "3",
+        "description": "Cutting edge application. joining a team of ten engineers based in New York, Sydney and London."
+
+     },
+     {
+      "date": "Jun 27",
+      "vendorName": "Randstand group",
+      "vendorContactperson": "Nikhil",
+      "contactNumber": "123-456-7890",
+      "contactEmailid": "1@gmail.com",
+      "status": "active",
+      "implementationPartner": "tcs",
+      "client": "General Motors Corporation",
+      "comments": "urgent requirement",
+      "callType": "Skype",
+      "numberOfrounds": "1",
+      "description": " SDLC support to include requirements analysis, design, implementation, unit testing as well as integration and test. "
+
+   },
+   {
+    "date": "Jun 28",
+    "vendorName": "HCL group",
+    "vendorContactperson": "Nikhil",
+    "contactNumber": "123-456-7890",
+    "contactEmailid": "1@gmail.com",
+    "status": "active",
+    "implementationPartner": "tcs",
+    "client": "Microsoft Corporation",
+    "comments": "urgent requirement",
+    "callType": "Skype",
+    "numberOfrounds": "1",
+    "description": " Requirements include analysis, design, implementation, unit testing as well as integration and test. "
+
+ }
+  ] 
+  
+
+}

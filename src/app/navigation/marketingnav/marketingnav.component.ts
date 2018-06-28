@@ -1,4 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from './../../shared/profile.service';
+import { DatasharedService } from './../../datashared.service';
 
 @Component({
   selector: 'app-marketingnav',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./marketingnav.component.css']
 })
 export class MarketingnavComponent implements OnInit {
-
-  constructor() { }
+  profileData: any;
+today: number = Date.now();
+  constructor(private profile: ProfileService) { }
 
   ngOnInit() {
+    this.profile.getUserProfileData().subscribe(
+      (data: any) => {
+       this.profileData = data;
+      },
+      (err: any) => {
+        console.log('Could not find the user profile data');
+      }
+     );
   }
 
 }

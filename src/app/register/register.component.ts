@@ -21,17 +21,15 @@ export class RegisterComponent implements OnInit {
     constructor(private _fb: FormBuilder) {
         this.createForm();
     }
-    
     deactivenextbtn() {
       this.nextbtn = true;
       console.log('helloo');
     }
-    
     addNewEntry() {
+
         const control = <FormArray>this.addForm.controls['itemRows'];
         control.push(this.initItemRows());
     }
-    
     initItemRows() {
         return this._fb.group({
 
@@ -39,15 +37,17 @@ export class RegisterComponent implements OnInit {
         });
     }
 
+
     createForm() {
         this.addForm = this._fb.group({
             itemRows: this._fb.array([])
         });
         this.addForm.setControl('itemRows', this._fb.array([]));
-        this.addNewEntry();
     }
 
+
     deleteRow(index: number) {
+
         const control = <FormArray>this.addForm.controls['itemRows'];
         control.removeAt(index);
     }
@@ -125,9 +125,12 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  saveUserInfo(input) {
+  onSubmit() {
     console.log(this.formVar.value);
     this.nextbtn = false;
   }
-  
+  onSubmit1(form1: any) {
+    console.log(form1);
+  }
+
 }
