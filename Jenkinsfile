@@ -38,6 +38,14 @@ pipeline{
                     
                 }
         }
+      
+        
+        stage("Deploy"){
+            steps{
+                sh "docker pull egiantsdocker/employeemanagementclient"
+                sh "docker run -p 80:80 --name employeemangementclient egiantsdocker/employeemanagementclient"
+            }
+        }
         
     
     }
