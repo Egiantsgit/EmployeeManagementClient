@@ -1,0 +1,12 @@
+<ag-grid-angular 
+#agGrid
+    style="width: 50%; height: 400px;" 
+    class="data-grid ag-theme-balham-dark" 
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [columnDefs]="columnDefs"
+    [enableColResize]="true"
+    (gridReady)="onGridReady($event)"
+    
+    >
+</ag-grid-angular>
