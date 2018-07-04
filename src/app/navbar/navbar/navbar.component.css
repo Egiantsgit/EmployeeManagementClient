@@ -1,0 +1,54 @@
+
+
+.navbar-custom {
+
+    background-color :#219DE5;
+    color: white;
+    
+
+}
+
+li a {
+    color: white;
+
+}
+
+li{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.dropdown-item{
+    background-color: #219DE5;
+    width: 200px;
+}
+.dropdown-menu{
+    background-color: #219DE5;
+    width: auto;
+}
+.dropdown{
+    color: #219DE5;
+    background-color: #219DE5;
+    
+}
+
+.dropdown-toggle {
+    color:white;
+    background-color: #219DE5;
+}
