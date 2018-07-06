@@ -23,6 +23,7 @@ import {MaterialComponent } from './material/material.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
+import { AgGridModule } from 'ag-grid-angular';
 
 
 // import {FileUploadModule} from 'primeng/primeng';
@@ -38,9 +39,8 @@ import { PayrollComponent } from './welcome/payroll/payroll.component';
 import { DashboardComponent } from './welcome/dashboard/dashboard.component';
 import { PendingRequestComponent } from './welcome/pending-request/pending-request.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
-// import { SubmitACallComponent } from './navigation/marketingnav/submit-a-call/submit-a-call.component';
-// import { SearchACallComponent } from './navigation/marketingnav/search-a-call/search-a-call.component';
-import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
+import { TableComponent } from './table/table.component';
+
 
 
 export function getAuthServiceConfigs() {
@@ -69,8 +69,6 @@ const appRoutes: Routes = [
   {path: 'requestus', component: RequestusComponent},
   {path: 'timesheet', component: TimesheetComponent},
   {path: 'statusreport', component: StatusreportComponent},
-  // {path: 'submit-a-call', component: SubmitACallComponent},
-  // {path: 'search-a-call', component: SearchACallComponent},
 
   { path: '',
     redirectTo: '/login',
@@ -104,12 +102,11 @@ const appRoutes: Routes = [
     TasksComponent,
     MarketingnavComponent,
     HomeFooterComponent,
-    // SubmitACallComponent,
-    // SearchACallComponent,
-    UpcomingEventsComponent
+    TableComponent
 ],
   imports: [
     BrowserModule,
+    AgGridModule.withComponents([TableComponent]),
     SocialLoginModule,
     HttpClientModule,
     HttpModule,

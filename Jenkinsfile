@@ -10,7 +10,7 @@ pipeline{
         
         stage("Install"){            
                 steps{                    
-                        sh "sh npm install"                      
+                        sh "npm install"                      
                     
                 }
         }
@@ -23,7 +23,7 @@ pipeline{
         
         stage("Package"){            
                 steps{                    
-                        sh "sh  ng build --prod"
+                        sh "ng build"
                     
                 }
         }        
@@ -33,10 +33,18 @@ pipeline{
         stage("Docker build"){            
                 steps{
                       sh "docker login --username egiantsdocker --password Egaints#1"        	
-                      sh "docker build -t employeemanagementclient ."
-                      sh "docker push egiantsdocker/employeemangementclient"
-                    }
+                      sh "docker build -t egiantsdocker/employeemanagementclient ."
+                      sh "docker push egiantsdocker/employeemanagementclient"
+                    
                 }
+        }
+      
+        
+        stage("Deploy"){
+            steps{
+                sh "docker pull egiantsdocker/employeemanagementclient"
+                sh "docker run -p 80:80 --name employeemangementclient egiantsdocker/employeemanagementclient"
+            }
         }
         
     
