@@ -14,14 +14,13 @@ export class TableComponent implements OnInit {
   private sortingOrder;
     constructor(private martketingData: MarketingService) {
       this.columnDefs = [
-        {headerName: 'Call ID', field: 'callId', width: 100, editable: true},
-        {headerName: 'Date', field: 'Date', width: 100, editable: true},
-        {headerName: 'Vendor Name', field: 'vendorName', width: 120, editable: true},
-        {headerName: 'Vendor Contact', field: 'vendorContact', width: 100, editable: true},
-        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber', width: 100, editable: true},
-        {headerName: 'Client', field: 'client', width: 100, editable: true},
-        {headerName: 'Status', field: 'status', width: 100, editable: true},
-        {headerName: 'Edit', field: 'edit', width: 100, cellRenderer: this.editFunction }
+        {headerName: 'Call ID', field: 'callId', width: 150},
+        {headerName: 'Date', field: 'Date', width: 100},
+        {headerName: 'Vendor Name', field: 'vendorName', width: 150},
+        {headerName: 'Vendor Contact', field: 'vendorContact', width: 150},
+        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber', width: 150},
+        {headerName: 'Client', field: 'client', width: 150},
+        {headerName: 'Status', field: 'status', width: 100}
     ];
     }
      onGridReady(params) {
@@ -31,23 +30,25 @@ export class TableComponent implements OnInit {
           (data: any) => {
             const rowData = data.marketingData;
             params.api.setRowData(rowData);
-          }
+          },
+          msg => {
+      console.error(`Error: ${msg.status} ${msg.statusText}`);
+    }
         );
 
 
 
      }
-     editFunction() {
-      return `<a class="btn" (click)="editFunc()">
-              <i class="fa fa-pencil-square-o"></i>
-              </a>
-              <a class="btn text-danger">
-              <i class="fa fa-trash-o"></i>
-              </a>`;
-
-     }
      editFunc() {
-      window.alert('hi');
+       window.alert('cell is double clicked');
+
+      // this.martketingData.getMarketingData().subscribe(
+      //   (data: any) => {
+      //     this.gridApi.setRowData([]);
+      //     const newData = data;
+      //     this.gridApi.updateRowData({add: newData});
+      //   }
+      // );
      }
 
   ngOnInit() {

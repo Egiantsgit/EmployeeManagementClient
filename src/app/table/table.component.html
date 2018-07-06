@@ -1,12 +1,16 @@
 <ag-grid-angular 
 #agGrid
-    style="width: 50%; height: 400px;" 
+    style="width: 65%; height: 400px;" 
     class="data-grid ag-theme-balham-dark" 
     [enableSorting]="true"
     [enableFilter]="true"
     [columnDefs]="columnDefs"
     [enableColResize]="true"
     (gridReady)="onGridReady($event)"
-    
+    rowSelection="multiple"
+    (rowDoubleClicked)="editFunc()"
+    [enterMovesDownAfterEdit]="true"
+    [enterMovesDown]="true"
+    [suppressDragLeaveHidesColumns]="true"
     >
 </ag-grid-angular>

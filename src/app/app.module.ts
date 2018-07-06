@@ -40,7 +40,7 @@ import { DashboardComponent } from './welcome/dashboard/dashboard.component';
 import { PendingRequestComponent } from './welcome/pending-request/pending-request.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { TableComponent } from './table/table.component';
-
+import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 
 
 export function getAuthServiceConfigs() {
@@ -102,7 +102,8 @@ const appRoutes: Routes = [
     TasksComponent,
     MarketingnavComponent,
     HomeFooterComponent,
-    TableComponent
+    TableComponent,
+    UpcomingEventsComponent
 ],
   imports: [
     BrowserModule,
