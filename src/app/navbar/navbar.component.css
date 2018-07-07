@@ -4,6 +4,7 @@
 
     background-color :#219DE5;
     color: white;
+    
 
 }
 
@@ -13,8 +14,8 @@ li a {
 }
 
 li{
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .dropbtn {
