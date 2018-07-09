@@ -4,7 +4,6 @@ import { Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import {
   AuthService,
-  FacebookLoginProvider,
   GoogleLoginProvider
 } from 'angular5-social-login';
 import { DOCUMENT } from '@angular/common';
@@ -20,7 +19,7 @@ export class LoginComponent implements OnInit {
   name: any;
   email: any;
   data: any;
-  emialId: any;
+  emailId: any;
   firstName: any;
   lastName: any;
   dob: any;
@@ -43,35 +42,43 @@ export class LoginComponent implements OnInit {
   signUpClicked() {
     this.isSignupTrigger = false;
   }
+  
+  
+  /**
+   * This function is triggered when Sign with Google button is clicked.
+   * And, a get operation is done and based on the response from server, we handle on navigating to the user to other pages.
+   * 
+   */
   public socialSignIn(socialPlatform: string) {
     let socialPlatformProvider;
-    if (socialPlatform === 'facebook') {
-      socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
-    } else if (socialPlatform === 'google') {
+    if (socialPlatform === 'google') {
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     }
-
+    
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         this.name = userData.name;
         this.email = userData.email;
-        this.autheticationProfileServiceService.getLoggedUserData()
+        this.autheticationProfileServiceService.getLoggedUserData(this.email)
         .subscribe(
-          (loggeddata: any) => {
-            if (loggeddata.Candidate[0].response[0].code === '200') {
-            this.dataService.datafromLogin = loggeddata;
+          (response: any) => {
+            if (response.status === '200') {
+            this.dataService.datafromLogin = response;
             this.router.navigate(['/home']);
-           }
-            if (loggeddata.Candidate[0].response[0].code === '50000') {
-            this.dataService.datafromLogin = loggeddata;
-            // this.isSignupTrigger = true;
+           }else if (response.status === '205') {
+            this.dataService.datafromLogin = response;
             this.router.navigate(['/register']);
-           }
-           if (loggeddata.Candidate[0].response[0].code === '401') {
+           }else if (response.status === '401') {
             this.isModelTrigger = true;
-            this.errres = 'Error Message: ' + loggeddata.Candidate[0].response[0].message;
-            this.errcode = 'Error Code: ' + loggeddata.Candidate[0].response[0].code;
+            this.errres = 'Error Message: ' + response.message;
+            this.errcode = 'Error Code: ' + response.status;
            }
+          },
+          error => { 
+            //Error Handler
+            this.isModelTrigger = true;
+            this.errres = 'Error Message: ' + error.message;
+            this.errcode = 'Error Code: ' + error.status;
           }
         );
       }
