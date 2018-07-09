@@ -40,6 +40,7 @@ import { EditProfileComponent } from './navbar/edit-profile/edit-profile.compone
 import {UpcomingEventsComponent} from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 
 
+
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     [{
