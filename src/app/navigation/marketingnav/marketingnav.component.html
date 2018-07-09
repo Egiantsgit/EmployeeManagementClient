@@ -1,6 +1,28 @@
-<app-navbar></app-navbar>
-<app-profile></app-profile>
-<app-upcoming-events></app-upcoming-events>
-<div class="homefooter">
-    <app-home-footer></app-home-footer>
-</div>
+
+<nav class="navbar-custom">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+<li ><a [routerLink]="['/payroll']">PAYROLL</a></li>
+          <li ><a [routerLink]="['/marketing']">MARKETING</a></li>
+          <li ><a [routerLink]="['/tasks']">MY TASKS</a></li>
+          <li ><a [routerLink]="['/requestus']">REQUEST US</a></li>
+          <li ><a [routerLink]="['/timesheet']">REPORT TIME SHEET</a></li>
+          <li ><a [routerLink]="['/statusreport']">WEEKLY STATUS REPORT</a></li>
+      </ul>
+      </div>
+      </nav>
+      
+
+<section class="middle">
+     <h2><b> {{profileData.Candidate | uppercase}} MY MARKETING PLAN</b></h2> </section>
+
+      <app-upcoming-events></app-upcoming-events>
+      <div class="homebreak"></div>
+      <app-table></app-table>
+
+      <div class="homefooter">
+        <app-home-footer></app-home-footer>
+    </div>
+      
+
+      

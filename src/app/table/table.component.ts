@@ -14,14 +14,14 @@ export class TableComponent implements OnInit {
   private sortingOrder;
     constructor(private martketingData: MarketingService) {
       this.columnDefs = [
-        {headerName: 'Call ID', field: 'callId', width: 100, editable: true},
-        {headerName: 'Date', field: 'Date', width: 100, editable: true},
-        {headerName: 'Vendor Name', field: 'vendorName', width: 120, editable: true},
-        {headerName: 'Vendor Contact', field: 'vendorContact', width: 100, editable: true},
-        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber', width: 100, editable: true},
-        {headerName: 'Client', field: 'client', width: 100, editable: true},
-        {headerName: 'Status', field: 'status', width: 100, editable: true},
-        {headerName: 'Edit', field: 'edit', width: 100, cellRenderer: this.editFunction }
+        {headerName: 'Call ID', field: 'callId', width: 130, editable: true},
+        {headerName: 'Date', field: 'Date', width: 130, editable: true},
+        {headerName: 'Vendor Name', field: 'vendorName', width: 130, editable: true},
+        {headerName: 'Vendor Contact', field: 'vendorContact', width: 130, editable: true},
+        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber', width: 130, editable: true},
+        {headerName: 'Client', field: 'client', width: 130, editable: true},
+        {headerName: 'Status', field: 'status', width: 130, editable: true},
+        {headerName: 'Edit', field: 'edit', width: 130, cellRenderer: this.editFunction }
     ];
     }
      onGridReady(params) {
