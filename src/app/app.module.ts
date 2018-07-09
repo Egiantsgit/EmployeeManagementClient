@@ -96,7 +96,8 @@ const appRoutes: Routes = [
     PayrollnavComponent,
     TasksComponent,
     MarketingnavComponent,
-    HomeFooterComponent,UpcomingEventsComponent,
+    HomeFooterComponent,
+    UpcomingEventsComponent,
     TableComponent,
     EditProfileComponent
 ],
