@@ -20,5 +20,5 @@ export class UpcomingEventsComponent implements OnInit {
       }
     );
   
-      }
+    }
 }
