@@ -61,7 +61,7 @@ li a {
     margin-top: 460px;
 }
 .homefooter{
-    margin-top :200px;
+    margin-top :5px;
 }
 
 .nav-tabs{
@@ -72,7 +72,34 @@ height: 40;
 }
 
 .middle{
-    margin-right: auto;
-    margin-left: auto;
-    width:50%;
+   
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 100px;
+    background-image: url("/src/assets/chess\ logo.jpg");
+
 }
+
+.rightcolumn {
+    float: right;
+    width: 25%;    
+    padding-left: 20px;
+}
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+.after {
+    content: "";
+    background: url(/src/assets/chess\ logo.jpg);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
