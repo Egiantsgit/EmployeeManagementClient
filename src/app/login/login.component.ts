@@ -42,19 +42,19 @@ export class LoginComponent implements OnInit {
   signUpClicked() {
     this.isSignupTrigger = false;
   }
-  
-  
+
+
   /**
    * This function is triggered when Sign with Google button is clicked.
    * And, a get operation is done and based on the response from server, we handle on navigating to the user to other pages.
-   * 
+   *
    */
   public socialSignIn(socialPlatform: string) {
     let socialPlatformProvider;
     if (socialPlatform === 'google') {
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     }
-    
+
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         this.name = userData.name;
@@ -62,20 +62,19 @@ export class LoginComponent implements OnInit {
         this.autheticationProfileServiceService.getLoggedUserData(this.email)
         .subscribe(
           (response: any) => {
-            if (response.status === '200') {
-            this.dataService.datafromLogin = response;
-            this.router.navigate(['/home']);
-           }else if (response.status === '205') {
-            this.dataService.datafromLogin = response;
-            this.router.navigate(['/register']);
-           }else if (response.status === '401') {
-            this.isModelTrigger = true;
-            this.errres = 'Error Message: ' + response.message;
-            this.errcode = 'Error Code: ' + response.status;
+            if (response === null) {
+              this.isModelTrigger = true;
+              this.errres = 'Please, contact System Administrator for Access.';
+           } else if ((response.uuid && response.userPersonalDetails && response.userEducationDetails && response.userImmigrationDetails && response.userWorkExperience) != null) {
+              this.dataService.datafromLogin = response;
+              this.router.navigate(['/home']);
+           } else {
+              this.dataService.datafromLogin = response;
+              this.router.navigate(['/register']);
            }
           },
-          error => { 
-            //Error Handler
+          error => {
+            // Error Handler
             this.isModelTrigger = true;
             this.errres = 'Error Message: ' + error.message;
             this.errcode = 'Error Code: ' + error.status;

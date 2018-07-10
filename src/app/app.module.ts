@@ -38,7 +38,6 @@ import { PendingRequestComponent } from './welcome/pending-request/pending-reque
 import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { TableComponent } from './table/table.component';
 import { EditProfileComponent } from './navbar/edit-profile/edit-profile.component';
-import {UpcomingEventsComponent} from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 
 
 
@@ -100,7 +99,7 @@ const appRoutes: Routes = [
 
     HomeFooterComponent,
     TableComponent,
-    UpcomingEventsComponent
+    UpcomingEventsComponent,
     EditProfileComponent
 
 ],
