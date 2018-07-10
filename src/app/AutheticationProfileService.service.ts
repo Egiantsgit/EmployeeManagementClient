@@ -20,7 +20,7 @@ export class AutheticationProfileServiceService {
 
   //get Service to fetch the logged in user data using emailId as key.
   getLoggedUserData(emailId): any {
-    return this.http.get('/usersMetaData/userMetaData/'+emailId);
+    return this.http.get('/users/user/'+emailId);
   }
   
 }
