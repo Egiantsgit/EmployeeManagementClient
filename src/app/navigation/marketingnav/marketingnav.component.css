@@ -9,70 +9,38 @@
 }
 
 li a {
-    color: white;
+    color: rgb(255, 255, 255);
 
 }
 
 li{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .navbar-nav {
     background-color :#219DE5;
     color: white;
     width: 1350px;
-    
-
-} 
-
-
-
-.panel-custom {
-
-    background-color :#219DE5;
-    color: white;
-    height: 40px;
-    width: 400px;
-
-
-
-}
-
-
-
-li a {
-    color: white;
-
-}
-
-.panel-container{
-     width: 1350px; 
-    background-color: rgb(241, 250, 250);
-
-
-} 
-.btn-primary {
-    background-color :#219DE5;
-    color: white;
 } 
 
 .homebreak {
     margin-top: 460px;
 }
 .homefooter{
-    margin-top :200px;
+    margin-top :5px;
 }
+   .bg { 
+    margin-top: 0px;
+    margin-bottom: 0px;  
+    height: 140px;
+    text-align: center;
+    padding:50px;
+    background-size: 500px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right,white 0%,black 100%),url('/assets/chess\ logo.jpg');
+    background-blend-mode:screen; 
 
-.nav-tabs{
-color :#219DE5;
-color: white;
-width: 1500px;
-height: 40;
-}
-
-.middle{
-    margin-right: auto;
-    margin-left: auto;
-    width:50%;
-}
+   }   
+   

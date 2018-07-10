@@ -3,11 +3,13 @@
     background-color :#219DE5;
     color: white;
     height: 40px;
-    width: 900px;   
+    width: 900px;  
+     
 }
 
 .container1{
     padding-left: 30px;
+    
     
 }
 
@@ -41,6 +43,7 @@
     padding-bottom: 50px;
     padding-left: 100px;
     
+    
 }
 
 
@@ -52,6 +55,7 @@
     vertical-align: center;
     background-color: rgb(224, 236, 243);
     padding: 10px;
+    
     
     
    }
