@@ -131,7 +131,7 @@ export class RegisterComponent implements OnInit {
   }
   
   saveUserInfo(input) {
-    let url = `/users/user/bravindra240@gmail.com`;
+    let url = `/users/user/{{emailId}}`;
   	this.http.post(url, JSON.stringify(this.user.value),{headers: new HttpHeaders().set('Content-Type', 'application/json')})
   			.subscribe(
   					res => console.log(res)
