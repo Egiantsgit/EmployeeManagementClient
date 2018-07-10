@@ -7,6 +7,7 @@ import { MarketingService } from './../shared/marketing.service';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
+  [x: string]: any;
 
   private gridApi;
   private gridColumnApi;
@@ -14,13 +15,14 @@ export class TableComponent implements OnInit {
   private sortingOrder;
     constructor(private martketingData: MarketingService) {
       this.columnDefs = [
-        {headerName: 'Call ID', field: 'callId', width: 150},
-        {headerName: 'Date', field: 'Date', width: 100},
-        {headerName: 'Vendor Name', field: 'vendorName', width: 150},
-        {headerName: 'Vendor Contact', field: 'vendorContact', width: 150},
-        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber', width: 150},
-        {headerName: 'Client', field: 'client', width: 150},
-        {headerName: 'Status', field: 'status', width: 100}
+        {headerName: 'Call ID', field: 'callId', width: 130, editable: true},
+        {headerName: 'Date', field: 'Date', width: 130, editable: true},
+        {headerName: 'Vendor Name', field: 'vendorName', width: 130, editable: true},
+        {headerName: 'Vendor Contact', field: 'vendorContact', width: 130, editable: true},
+        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber', width: 130, editable: true},
+        {headerName: 'Client', field: 'client', width: 130, editable: true},
+        {headerName: 'Status', field: 'status', width: 130, editable: true},
+        {headerName: 'Edit', field: 'edit', width: 130, cellRenderer: this.editFunction }
     ];
     }
      onGridReady(params) {
@@ -32,13 +34,10 @@ export class TableComponent implements OnInit {
             params.api.setRowData(rowData);
           },
           msg => {
-      console.error(`Error: ${msg.status} ${msg.statusText}`);
-    }
-        );
-
-
-
+            console.error(`Error: ${msg.status} ${msg.statusText}`);
+        });
      }
+  
      editFunc() {
        window.alert('cell is double clicked');
 

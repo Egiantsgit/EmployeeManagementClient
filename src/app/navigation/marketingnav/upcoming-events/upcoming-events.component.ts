@@ -16,7 +16,7 @@ export class UpcomingEventsComponent implements OnInit {
       (data: any) => {
         this.upcomingevents = data.eventdata;
 
-      }
-    );
-      }
+      });
+   }
+
 }
