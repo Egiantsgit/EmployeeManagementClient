@@ -7,7 +7,6 @@ import { MarketingService } from './../shared/marketing.service';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  [x: string]: any;
 
   private gridApi;
   private gridColumnApi;
@@ -37,6 +36,15 @@ export class TableComponent implements OnInit {
             console.error(`Error: ${msg.status} ${msg.statusText}`);
         });
      }
+  
+  editFunction() {    
+    return `<a class="btn" (click)="editFunc()">    
+            <i class="fa fa-pencil-square-o"></i>   
+            </a>    
+            <a class="btn text-danger">   
+            <i class="fa fa-trash-o"></i>   
+             </a>`;    
+    }
   
      editFunc() {
        window.alert('cell is double clicked');
