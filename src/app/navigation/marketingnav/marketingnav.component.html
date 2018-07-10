@@ -1,7 +1,8 @@
 
-<nav class="navbar-primary">
+<nav class="navbar-custom">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
+          <li> <a [routerLink]="['/home']"style="font-size:24px" class="fa">&#xf015;</a></li>
 <li ><a [routerLink]="['/payroll']">PAYROLL</a></li>
           <li ><a [routerLink]="['/marketing']">MARKETING</a></li>
           <li ><a [routerLink]="['/tasks']">MY TASKS</a></li>
@@ -9,15 +10,11 @@
           <li ><a [routerLink]="['/timesheet']">REPORT TIME SHEET</a></li>
           <li ><a [routerLink]="['/statusreport']">WEEKLY STATUS REPORT</a></li></ul></div></nav>
       
-      
-     <h2 class="middle"><b> {{profileData.Candidate | uppercase}} MY MARKETING PLAN 
-     <img src="assets/chess logo.jpg" width="350" height="120"></b></h2>  
-
+     <h2 class="bg" ><b> {{profileData.Candidate | uppercase}} MARKETING PLAN </b></h2>  
 
       <app-upcoming-events></app-upcoming-events>
       <div class="homebreak"></div>
       <app-table></app-table>  
-      
 
       <div style="opacity: 0.7;"><img src="assets/marketing footer image.png" width="1350" height="400"></div>
 
