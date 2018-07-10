@@ -39,8 +39,6 @@ import { TableComponent } from './table/table.component';
 import { EditProfileComponent } from './navbar/edit-profile/edit-profile.component';
 import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 
-
-
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     [{

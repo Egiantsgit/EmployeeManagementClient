@@ -1,3 +1,6 @@
+.container-fluid{
+    background-color: #219DE5;
+}
 .panel-custom {
 
     background-color :#219DE5;
@@ -48,8 +51,8 @@
 
 
 .container{
-    height: 110px;
-    width: 900px;
+    height: 50%;
+    width: 1000px;
     text-align: center;
     font-weight: bold;
     vertical-align: center;

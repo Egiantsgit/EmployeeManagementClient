@@ -31,23 +31,31 @@ export class TableComponent implements OnInit {
           (data: any) => {
             const rowData = data.marketingData;
             params.api.setRowData(rowData);
-          }
-        );
-
-
-
+          },
+          msg => {
+            console.error(`Error: ${msg.status} ${msg.statusText}`);
+        });
      }
-     editFunction() {
-      return `<a class="btn" (click)="editFunc()">
-              <i class="fa fa-pencil-square-o"></i>
-              </a>
-              <a class="btn text-danger">
-              <i class="fa fa-trash-o"></i>
-              </a>`;
-
-     }
+  
+  editFunction() {    
+    return `<a class="btn" (click)="editFunc()">    
+            <i class="fa fa-pencil-square-o"></i>   
+            </a>    
+            <a class="btn text-danger">   
+            <i class="fa fa-trash-o"></i>   
+             </a>`;    
+    }
+  
      editFunc() {
-      window.alert('hi');
+       window.alert('cell is double clicked');
+
+      // this.martketingData.getMarketingData().subscribe(
+      //   (data: any) => {
+      //     this.gridApi.setRowData([]);
+      //     const newData = data;
+      //     this.gridApi.updateRowData({add: newData});
+      //   }
+      // );
      }
 
   ngOnInit() {
