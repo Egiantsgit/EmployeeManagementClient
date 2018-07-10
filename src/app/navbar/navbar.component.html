@@ -8,7 +8,20 @@
           <li ><a [routerLink]="['/requestus']">REQUEST US</a></li>
           <li ><a [routerLink]="['/timesheet']">REPORT TIME SHEET</a></li>
           <li ><a [routerLink]="['/statusreport']">WEEKLY STATUS REPORT</a></li>
-          <li><a>PROFILE  <i class="fa fa-user-circle"></i></a></li>
+          
+          <li>
+            <a class="dropdown">
+              <button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
+                PROFILE
+              </button><i class="fa fa-user-circle"></i>
+              <div class="dropdown-menu">
+                <li class="dropdown-item" href="#">{{loggedUsedData.Candidate}}</li>
+                <li class="dropdown-item"><a [routerLink]="['/edit-profile']">Edit profile</a></li>
+                <li class="dropdown-item"><a [routerLink]="['/login']">Logout</a></li>
+              </div>
+            </a>
+          </li>
+          
       </ul>
     </div>
   </nav>

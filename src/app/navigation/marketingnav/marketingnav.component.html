@@ -1,8 +1,45 @@
 <app-navbar></app-navbar>
 <app-profile></app-profile>
-<section><app-upcoming-events></app-upcoming-events></section>
+<section>
+	<app-upcoming-events></app-upcoming-events>
+</section>
 
-<section><app-table></app-table></section>
+<section>
+	<app-table></app-table>
+</section>
 <div class="homefooter">
-    <app-home-footer></app-home-footer>
+	<app-home-footer></app-home-footer>
 </div>
+
+<nav class="navbar-custom">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li><a [routerLink]="['/home']" style="font-size: 24px"
+				class="fa">&#xf015;</a></li>
+			<li><a [routerLink]="['/payroll']">PAYROLL</a></li>
+			<li><a [routerLink]="['/marketing']">MARKETING</a></li>
+			<li><a [routerLink]="['/tasks']">MY TASKS</a></li>
+			<li><a [routerLink]="['/requestus']">REQUEST US</a></li>
+			<li><a [routerLink]="['/timesheet']">REPORT TIME SHEET</a></li>
+			<li><a [routerLink]="['/statusreport']">WEEKLY STATUS
+					REPORT</a></li>
+		</ul>
+	</div>
+</nav>
+
+<h2 class="bg">
+	<b> {{profileData.Candidate | uppercase}} MARKETING PLAN </b>
+</h2>
+
+<app-upcoming-events></app-upcoming-events>
+<div class="homebreak"></div>
+<app-table></app-table>
+
+<div style="opacity: 0.7;">
+	<img src="assets/marketing footer image.png" width="1350" height="400">
+</div>
+
+<div class="homefooter">
+	<app-home-footer></app-home-footer>
+</div>
+

@@ -20,11 +20,11 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material/material.module';
 import { MaterialComponent } from './material/material.component';
-import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { AgGridModule } from 'ag-grid-angular';
+
 import {
   SocialLoginModule,
   AuthServiceConfig,
@@ -36,8 +36,8 @@ import { DashboardComponent } from './welcome/dashboard/dashboard.component';
 import { PendingRequestComponent } from './welcome/pending-request/pending-request.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { TableComponent } from './table/table.component';
+import { EditProfileComponent } from './navbar/edit-profile/edit-profile.component';
 import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
-
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -61,6 +61,7 @@ const appRoutes: Routes = [
   {path: 'requestus', component: RequestusComponent},
   {path: 'timesheet', component: TimesheetComponent},
   {path: 'statusreport', component: StatusreportComponent},
+  {path: 'edit-profile', component:EditProfileComponent},
 
   { path: '',
     redirectTo: '/login',
@@ -94,8 +95,9 @@ const appRoutes: Routes = [
     TasksComponent,
     MarketingnavComponent,
     HomeFooterComponent,
+    UpcomingEventsComponent,
     TableComponent,
-    UpcomingEventsComponent
+    EditProfileComponent
 ],
   imports: [
     BrowserModule,
