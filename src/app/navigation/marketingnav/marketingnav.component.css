@@ -71,19 +71,25 @@ width: 1500px;
 height: 40;
 }
 
-.middle{
-   
-    margin-top: 100px;
-    margin-left: 200px;
-    margin-right: 100px;
-    background-image: url("/src/assets/chess\ logo.jpg");
-
-}
-
+.middle{  
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        text-align: right;
+        background-position: left;
+       background-color:white;
+       padding-right: 25px;
+       background-image: url("/src/assets/chess\ logo.jpg");
+      background: linear-gradient(to right, rgba(255,0,0,0), white(255,0,0,1));
+             
+    
+   }
+        
 .rightcolumn {
     float: right;
     width: 25%;    
     padding-left: 20px;
+    
 }
 
 
@@ -92,14 +98,10 @@ height: 40;
     width: 33.33%;
     padding: 15px;
 }
-.after {
-    content: "";
-    background: url(/src/assets/chess\ logo.jpg);
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-  }
+.figure {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+}
