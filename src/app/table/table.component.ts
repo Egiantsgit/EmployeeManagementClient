@@ -14,14 +14,13 @@ export class TableComponent implements OnInit {
   private sortingOrder;
     constructor(private martketingData: MarketingService) {
       this.columnDefs = [
-        {headerName: 'Call ID', field: 'callId', width: 130, editable: true},
-        {headerName: 'Date', field: 'Date', width: 130, editable: true},
-        {headerName: 'Vendor Name', field: 'vendorName', width: 130, editable: true},
-        {headerName: 'Vendor Contact', field: 'vendorContact', width: 130, editable: true},
-        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber', width: 130, editable: true},
-        {headerName: 'Client', field: 'client', width: 130, editable: true},
-        {headerName: 'Status', field: 'status', width: 130, editable: true},
-        {headerName: 'Edit', field: 'edit', width: 130, cellRenderer: this.editFunction }
+        {headerName: 'Call ID', field: 'callId', width: 120},
+        {headerName: 'Date', field: 'Date', width: 150},
+        {headerName: 'Vendor Name', field: 'vendorName', width: 150},
+        {headerName: 'Vendor Contact', field: 'vendorContact', width: 150},
+        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber', width: 150},
+        {headerName: 'Client', field: 'client', width: 150},
+        {headerName: 'Status', field: 'status', width: 120}
     ];
     }
      onGridReady(params) {
@@ -33,19 +32,13 @@ export class TableComponent implements OnInit {
             params.api.setRowData(rowData);
           },
           msg => {
-            console.error(`Error: ${msg.status} ${msg.statusText}`);
-        });
-     }
-  
-  editFunction() {    
-    return `<a class="btn" (click)="editFunc()">    
-            <i class="fa fa-pencil-square-o"></i>   
-            </a>    
-            <a class="btn text-danger">   
-            <i class="fa fa-trash-o"></i>   
-             </a>`;    
+      console.error(`Error: ${msg.status} ${msg.statusText}`);
     }
-  
+        );
+
+
+
+     }
      editFunc() {
        window.alert('cell is double clicked');
 

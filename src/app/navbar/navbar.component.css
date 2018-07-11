@@ -4,7 +4,7 @@
 
     background-color :#219DE5;
     color: white;
-    
+
 
 }
 
@@ -14,15 +14,15 @@ li a {
 }
 
 li{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 29px;
+    padding-right: 29px;
 }
 
 .dropbtn {
     background-color: #3498DB;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 10px;
     border: none;
     cursor: pointer;
 }
