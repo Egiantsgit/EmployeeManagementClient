@@ -19,8 +19,7 @@
 
 .navbar-custom {
 	background-color: #219DE5;
-	color: white;
-	
+	color: white;	
 }
 
 li a {
@@ -39,7 +38,7 @@ li {
 }
 
 .homebreak {
-	margin-top: 550px;
+	margin-top: 420px;
 }
 
 .homefooter {
@@ -52,10 +51,15 @@ li {
 	height: 140px;
 	text-align: center;
 	padding: 50px;
-	background-size: 500px;
+	background-size: 450px;
 	background-position: right;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(to right, white 0%, black 100%),
 		url('/assets/chess\ logo.jpg');
 	background-blend-mode: screen;
+	
+}
+
+.col-md-9{
+	padding-left: 17px;
 }

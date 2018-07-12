@@ -1,32 +1,24 @@
-<nav class="navbar-custom">
-	<div class="container-fluid">
-		<ul class="nav navbar-nav">
-			<li><a [routerLink]="['/home']" style="font-size: 24px"
-				class="fa">&#xf015;</a></li>
-			<li><a [routerLink]="['/payroll']">PAYROLL</a></li>
-			<li><a [routerLink]="['/marketing']">MARKETING</a></li>
-			<li><a [routerLink]="['/tasks']">MY TASKS</a></li>
-			<li><a [routerLink]="['/requestus']">REQUEST US</a></li>
-			<li><a [routerLink]="['/timesheet']">REPORT TIME SHEET</a></li>
-			<li><a [routerLink]="['/statusreport']">WEEKLY STATUS
-					REPORT</a></li>
-		</ul>
-	</div>
-</nav>
 
-<h2 class="bg">
-	<b> {{profileData.Candidate | uppercase}} MARKETING PLAN </b>
-</h2>
 
-<app-upcoming-events></app-upcoming-events>
-<div class="homebreak"></div>
-<app-table></app-table>
-
-<div style="opacity: 0.7;">
-	<img src="assets/marketing footer image.png" width="1350" height="400">
-</div>
-
-<div class="homefooter">
-	<app-home-footer></app-home-footer>
-</div>
+<app-navbar></app-navbar>
+		<div style="padding-right: 17px"><h2 class="bg">
+			<b> {{profileData.Candidate | uppercase}} MARKETING PLAN </b>
+				</h2>
+					</div>					
+					<app-upcoming-events></app-upcoming-events>				
+					<div class="homebreak"></div>
+					  <div style="padding-bottom: 10px" class="row">
+						<div class="col-md-8">
+						 <app-table></app-table>
+						    </div>
+						      <div class="col-md-4">
+							<img src="assets/chess.jpg" width="95%" height="400">
+						</div>
+					</div>
+				<div style="opacity: 0.7;">
+			<img class="img-responsive" src="assets/marketing footer image.png" width="1350%" height="400">
+		</div>
+			<div class="homefooter">
+				<app-home-footer></app-home-footer>
+					</div>
 
