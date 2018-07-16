@@ -8,6 +8,7 @@
 	background-image: linear-gradient(to right, white 0%, black 100%),
 		url('/assets/chess\ logo.jpg');
 	background-blend-mode: screen;
+	margin: 0%;
 }
 .box{
 	width: 100%;
