@@ -1,0 +1,36 @@
+.container{
+
+    background-color: #DDF1FF;
+    height: 600px;
+    width: 600px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+.phone-number .col-xs-2::after{
+    content: "-";
+    position:absolute;
+       right: 5px;
+       color: black;
+       border: 0px solid;
+       top: 5px;
+   }
+  
+
+.input-group-addon{
+
+    background-color: #DDF1FF;
+   
+    color: #219DE5;
+
+
+}
+
+button span{
+
+    padding: 10px;
+    margin-left: 100px;   
+}
+button {
+    width: 200px;
+}
