@@ -10,42 +10,49 @@ import { DatasharedService } from './../datashared.service';
 })
 export class RegisterComponent implements OnInit {
   id: any = 1;
-  nextbtn: any = true;
-  nextbtn2: any = true;
-  nextbtn3: any = true;
+  personalNextBtn: any = true;
+  eduNextBtn: any = true;
+  immigNextBtn: any = true;
 
   user: FormGroup;
   addForm: FormGroup;
+  employeeForm: FormGroup;
 
     constructor(private _fb: FormBuilder, private http: HttpClient, private dataService: DatasharedService) {
-        this.createForm();
+      
     }
-
-    addNewEntry() {
-        const control = <FormArray>this.addForm.controls['itemRows'];
-        control.push(this.initItemRows());
-    }
+   
     
     initItemRows() {
         return this._fb.group({
-            itemname: ['']
+            companyName:'',startYear:'',companyLocation:'',offerLetter:''
         });
     }
 
-    createForm() {
-        this.addForm = this._fb.group({
-            itemRows: this._fb.array([])
-        });
-        this.addForm.setControl('itemRows', this._fb.array([]));
-        this.addNewEntry();
+    
+
+    employeeExpDetails(){  
+            alert(JSON.stringify(this.employeeForm.value));
+    }
+
+    addNewRow() {
+        const control = <FormArray>this.employeeForm.controls['itemRows'];
+        control.push(this.initItemRows());
     }
 
     deleteRow(index: number) {
-        const control = <FormArray>this.addForm.controls['itemRows'];
+        const control = <FormArray>this.employeeForm.controls['itemRows'];
         control.removeAt(index);
     }
 
   ngOnInit() {
+
+    this.employeeForm = this._fb.group({
+        itemRows: this._fb.array([this.initItemRows()]) 
+      });
+
+   
+
     this.user = new FormGroup({
       uuid : new FormControl(),
       userPersonalDetails: new FormGroup({
@@ -122,6 +129,7 @@ export class RegisterComponent implements OnInit {
         userWorkExperience: new FormGroup({
             totalExp: new FormControl(),
             previousFieldOfExp: new FormControl(),
+            companyDetails: this.employeeForm
         }),
     });
     if(this.dataService.datafromLogin != null){
@@ -131,8 +139,22 @@ export class RegisterComponent implements OnInit {
   }
   
   saveUserInfo(input) {
+ 	console.log(input);
+ 	let data:string = "";
+ 	if(input == 1){
+ 		this.personalNextBtn = false;
+ 		data = this.user.value.userPersonalDetails;
+ 	}else if(input == 2){
+ 		this.eduNextBtn = false;
+ 		data = this.user.value.userEducationDetails;
+ 	}else if(input == 3){
+ 		this.immigNextBtn = false;
+ 		data = this.user.value.userImmigrationDetails;
+ 	}else if(input == 4){
+ 		data = this.user.value.userWorkExperience;
+    }
     let url = `/users/user/{{emailId}}`;
-  	this.http.post(url, JSON.stringify(this.user.value),{headers: new HttpHeaders().set('Content-Type', 'application/json')})
+  	this.http.post(url, JSON.stringify(data),{headers: new HttpHeaders().set('Content-Type', 'application/json')})
   			.subscribe(
   					res => console.log(res)
   	);
