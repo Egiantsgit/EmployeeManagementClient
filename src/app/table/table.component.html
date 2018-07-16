@@ -1,5 +1,4 @@
 <ag-grid-angular 
-#agGrid
     style="height: 400px;" 
     class="data-grid ag-theme-balham-dark" 
     [enableSorting]="true"
@@ -11,5 +10,6 @@
     (rowDoubleClicked)="editFunc()"
     [enterMovesDownAfterEdit]="true"
     [enterMovesDown]="true"
+    [suppressDragLeaveHidesColumns]="true"
     >
 </ag-grid-angular>

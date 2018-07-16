@@ -1,72 +1,13 @@
-<div class="panel-group" >
-		<div class="panel panel-primary">
-			<div class="panel-heading" style="background-color: #219DE5"><b>Upcoming Events</b></div>
-				<div class="panel-body"   *ngFor="let event of upcomingevents">
-						<div class="panel panel-default">
-								<div class="panel-body" >				
-	<form>
-	  <div class="row">
-		<div class="col-md-2">
-		  <div class="form-group">
-			
-			<b><input type="text" class="btn btn-primary" name="lastName" value={{event.date}}></b>
-		  </div>
-		</div>
-		<div class="col-md-5">
-		  <div class="form-group">
-			<div class="row">
-			 <div class="col-md-4">
-			  <label>Client Name</label>
-			 </div>
-			 <div class="col-md-8">
-			  <b><input type="text" class="form-control" name="lastName" value={{event.client}}></b>
-			 </div>
-		    </div>
-		  </div>
-		</div>
-		<div class="col-md-5">
-			<div class="form-group">
-			    <div class="row">
-			  	    <div class="col-md-4">
-					    <label>Vendor Name</label>
-		    	    </div>
-					<div class="col-md-8">
-					    <b><input type="text" class="form-control" name="lastName" value={{event.vendorName}}></b>
-					</div>
-				</div>
-			</div>
-		</div>
-	  </div>
-	  <h6 class="panel-word">
-			<b>{{event.description}} </b> <b class="panel-bold">it's a
-				{{event.callType}} call <i class="fa fa-comment"
-				style="font-size: 20px; color: #219DE5"></i>
-			</b>
-		</h6>
-		</form>
-		</div>
-		</div>
-	</div>
-	</div>
-	</div>
 
-
-
-
-<!-- <div class="container-fluid">
-	<div class="panel panel-custom">
-		<div class="panel-heading">
-			<h1 class="panel-title">
+<div class="container1" class="starter-template" class="container-fluid"><div class="panel panel-custom">
+		<div class="panel-heading">			
 				<b>Upcomming Events</b>
-			</h1>
-		</div>
-
-		<div class="panel-body" class="padding">
+			</div>
 			<div class="panel-padding">
-				<div class="container" *ngFor="let event of upcomingevents ">
+				<div  class="container" *ngFor="let event of upcomingevents ">
 					<section>
-						<form class="form-group"
-							style="padding-bottom: 60px; height: 120px; background-color: white">
+						<form  class="form-group" 
+							style="padding-bottom: 90px; height: 20px; background-color: white">
 							<label class="panel-tab">{{event.date}}</label> class <label
 								class="panel-word">Client Name <label
 								class="panel-style">{{event.client}}</label></label> <label
@@ -85,4 +26,4 @@
 			<div class="panel-footer"></div>
 		</div>
 	</div>
-</div> -->
+	

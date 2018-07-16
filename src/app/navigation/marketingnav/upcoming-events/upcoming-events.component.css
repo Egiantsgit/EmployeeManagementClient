@@ -1,20 +1,41 @@
+
+.panel-custom {
+    background-color :#219DE5;
+    color: white;
+    height: 100px;
+    width: 100%;  
+}
+
+.container1{
+    padding-left: 17px;
+    padding-bottom: 100px;    
+}
+
+.panel-tab {
+    background-color: #219DE5;
+    color: white;
+    height: 20px;
+    width:6%;    
+}
+
 .panel-word {
     color: rgb(71, 69, 69);
-    text-align: center;
 }
-.panel-bold {
-    color: #219DE5;
-    font-size: 150%;
-}
+
 .container{
-    width:100%;
-}
-.btn-primary{
-    width:50%;
-    background-color: #219DE5;
-    text-align: justify;
-}
-.panel-primary{
-    background-color: aliceblue;
-    height:80%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: center;
+    background-color: rgb(224, 236, 243);
+    /* padding: 10px; */
+    padding-bottom: 0px;    
+   }
+
+.panel-style {     
+        border: 1px solid #219DE5;
+        margin:  10px ;
+        height: 30px;
+        width: 250px;
+        background-color: white;    
 }

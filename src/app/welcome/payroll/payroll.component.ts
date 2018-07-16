@@ -26,16 +26,7 @@ export class PayrollComponent implements OnInit {
       }
   }
   };
-  public chartColors: Array<any> = [
-    { // first color
-      backgroundColor: '#437DA0',
-      borderColor: '#437DA0',
-      pointBackgroundColor: '#437DA0',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: '#437DA0'
-    },
-   ];
+  
 
   public barChartLabels: string[] = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Agu', 'Sept', 'Oct', 'Nov', 'Dec'];
   public barChartType: any = 'bar';

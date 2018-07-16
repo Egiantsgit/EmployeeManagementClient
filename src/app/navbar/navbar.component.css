@@ -1,27 +1,25 @@
-.navbar-custom {
 
+
+.navbar-custom {
     background-color :#219DE5;
     color: white;
-    border: 0ch;
-    padding: 0px;
-
+    margin:1px;
 }
 
 li a {
     color: white;
-
 }
 
 li{
-    padding-left: 29px;
-    padding-right: 29px;
-}
+    padding-left: 18px;
+    padding-right: 18px;
+        }
 
 .dropbtn {
     background-color: #3498DB;
     color: white;
-    padding: 10px;
-    font-size: 10px;
+    padding: 16px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
 }
@@ -35,7 +33,7 @@ li{
 .show {display: block;}
 .dropdown-item{
     background-color: #219DE5;
-    width: 200px;
+    width: 200%;
 }
 .dropdown-menu{
     background-color: #219DE5;

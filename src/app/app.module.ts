@@ -38,7 +38,7 @@ import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { TableComponent } from './table/table.component';
 import { EditProfileComponent } from './navbar/edit-profile/edit-profile.component';
 import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
-import { SubmitSearchCallComponent } from './navigation/marketingnav/submit-search-call/submit-search-call.component';
+import { MarketinggraphComponent } from './navigation/marketingnav/marketinggraph/marketinggraph.component';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -99,7 +99,7 @@ const appRoutes: Routes = [
     UpcomingEventsComponent,
     TableComponent,
     EditProfileComponent,
-    SubmitSearchCallComponent
+    MarketinggraphComponent
 ],
   imports: [
     BrowserModule,

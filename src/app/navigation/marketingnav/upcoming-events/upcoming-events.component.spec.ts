@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubmitdataComponent } from './submitdata.component';
+import { UpcomingEventsComponent } from './upcoming-events.component';
 
-describe('SubmitdataComponent', () => {
-  let component: SubmitdataComponent;
-  let fixture: ComponentFixture<SubmitdataComponent>;
+describe('UpcomingEventsComponent', () => {
+  let component: UpcomingEventsComponent;
+  let fixture: ComponentFixture<UpcomingEventsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubmitdataComponent ]
+      declarations: [ UpcomingEventsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SubmitdataComponent);
+    fixture = TestBed.createComponent(UpcomingEventsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
