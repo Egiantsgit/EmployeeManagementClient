@@ -1,9 +1,9 @@
-
-
 .navbar-custom {
     background-color :#219DE5;
     color: white;
-    margin:1px;
+    border: 0ch;
+    padding: 0px;
+
 }
 
 li a {
@@ -11,15 +11,15 @@ li a {
 }
 
 li{
-    padding-left: 18px;
-    padding-right: 18px;
-        }
+    padding-left: 29px;
+    padding-right: 29px;
+}
 
 .dropbtn {
     background-color: #3498DB;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 10px;
     border: none;
     cursor: pointer;
 }

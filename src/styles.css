@@ -8,24 +8,17 @@
 .ag-column-hover {
     background-color: #a6f3d9;
 }
+.ag-root{
+    font-size:14px;
+    border: solid 2px rgb(58, 166, 255);
+}
 .ag-header {
     background-color:rgb(58, 166, 255);
-    font-size:14px;
     text-align: center;
-    border: solid 2px rgb(58, 166, 255);
-    padding-top: 5px; 
 }
-.ag-body{
-    font-size:14px;
-   text-align: center;
-   border: solid 2px rgb(58, 166, 255);
-   }
-.ag-root{
-    padding-left: 17px;
-}
+
 .ag-cell{
     text-align: center;
-    padding:5px;
 }
 .ag-row-even{
     background-color:rgb(195, 216, 247);
