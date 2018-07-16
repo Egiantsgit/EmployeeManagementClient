@@ -193,7 +193,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="submit" class="btn btn-primary">Save</button>
-						<button [disabled]="nextbtn" type="button" class="btn btn-primary"
+						<button [disabled]="personalNextBtn" type="button" class="btn btn-primary"
 							href="#edu" data-toggle="pill" (click)="(id=2)">Next</button>
 					</div>
 				</fieldset>	
@@ -403,7 +403,7 @@
 							type="button" class="btn btn-primary">Back</button>
 						<button type="submit" class="btn btn-primary">Save</button>
 						<button type="button" class="btn btn-primary" href="#immi"
-							data-toggle="pill" (click)="(id=3)" [disabled]="nextbtn">Next</button>
+							data-toggle="pill" (click)="(id=3)" [disabled]="eduNextBtn">Next</button>
 					</div>
 					</fieldset>
 				</form>
@@ -416,10 +416,10 @@
 
 			<div id="immi" class="tab-pane fade"
 				[ngClass]="{'in active': id === 3 }">
-				<h3 align="left" class="col-sm-3 form-group" style="color: skyblue">Immigration
-					Details</h3>
 					<form [formGroup]="user" (ngSubmit)="saveUserInfo(3)">
 					<fieldset formGroupName="userImmigrationDetails">
+					<h3 align="left" class="col-sm-offset-0" style="color: skyblue">Immigration
+					Details</h3>
 				<div class="container ">
 					<div class="col-lg-12 well">
 						<div class="row">
@@ -528,10 +528,9 @@
 				<div class="modal-footer">
 					<button href="#edu" data-toggle="pill" (click)="(id=2)"
 						type="button" class="btn btn-primary">Back</button>
-					<button href="#immi" align="right" data-toggle="pill" type="button"
-						class="btn btn-primary">Save</button>
+					<button href="#immi"  type="submit" class="btn btn-primary">Save</button>
 					<button type="button" class="btn btn-primary" href="#work"
-						data-toggle="pill" (click)="(id=4)">Next</button>
+						data-toggle="pill" (click)="(id=4)" [disabled]="immigNextBtn">Next</button>
 				</div>
 				</fieldset>
 				</form>
@@ -543,7 +542,7 @@
 
 			<div id="work" class="tab-pane fade"
 				[ngClass]="{'in active': id === 4 }">
-				<h3 align="left" class="col-sm-6 form-group" style="color: skyblue">Work
+				<h3 align="left" class="col-sm-offset-0" style="color: skyblue">Work
 					Experience Details</h3>
 				<br>
 				<form [formGroup]="user" (ngSubmit)="saveUserInfo(4)">
@@ -569,15 +568,15 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" (click)="addNewEntry()"
-					class="btn btn-primary">Add Entry</button>
-				<form [formGroup]="addForm">
+			
+					
+				<form [formGroup]="employeeForm">
 					<div formArrayName="itemRows">
 						<div
-							*ngFor="let itemrow of addForm.controls.itemRows.controls; let i=index"
+						*ngFor="let itemrow of employeeForm.controls.itemRows.controls; let i=index"
 							[formGroupName]="i">
 							<h5 align="left" class="col-sm-3 form-group">
-								<b>Company Details {{i+1}}</b>
+								<b>Company Details #{{ i + 1 }}</b>
 							</h5>
 							<div class="container ">
 								<div class="col-lg-12 well">
@@ -585,12 +584,15 @@
 											<div class="col-sm-12">
 												<div class="row">
 													<div class="col-sm-6 form-group">
-														<label>Company name</label> <input type="text"
+														<label>Company name</label> 
+														<input type="text"
 															placeholder="" class="form-control" name="companyName" formControlName="companyName">
+														
+								
 													</div>
 													<div class="col-sm-6 form-group">
 														<label>Start Year and Month</label> <input type="month"
-															placeholder="" class="form-control" name="startYM" formControlName="startYM">
+															placeholder="" class="form-control" name="startYear" formControlName="startYear">
 													</div>
 												</div>
 												<div class="row">
@@ -601,27 +603,28 @@
 													</div>
 													<div class="col-sm-6 form-group">
 														<label>Upload Experience Letter</label> <input type="file"
-															placeholder="" class="">
+															placeholder=""  formControlName="offerLetter">
 													</div>
 												</div>
-												<button
-													*ngIf="addForm.controls.itemRows.controls.length > 0"
-													(click)="deleteRow(i-1)" class="btn btn-danger">Delete
-													Entry</button>
-											</div>
+												<div style="margin-left:94%">
+													<button type="button" (click)="addNewRow()" class="btn btn-primary">+</button>
+													<button
+													*ngIf="employeeForm.controls.itemRows.controls.length > 1"
+													(click)="deleteRow(i)" class="btn btn-danger">-</button>
+												     </div>
+												</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</form>
+				</fieldset>
 				<div class="modal-footer">
 					<button href="#immi" data-toggle="pill" (click)="(id=3)"
 						type="button" class="btn btn-primary">Back</button>
-					<button type="button" align="right" data-toggle="pill"
-						class="btn btn-primary">Save</button>
+					<button type="submit" class="btn btn-primary">Save</button>
 				</div>
-				</fieldset>
 				</form>
 			</div>
 		</div>
