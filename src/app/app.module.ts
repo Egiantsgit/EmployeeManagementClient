@@ -40,8 +40,6 @@ import { EditProfileComponent } from './navbar/edit-profile/edit-profile.compone
 import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 import { SubmitSearchCallComponent } from './navigation/marketingnav/submit-search-call/submit-search-call.component';
 import { FollowUpsTodayComponent } from './navigation/marketingnav/follow-ups-today/follow-ups-today.component';
-import { SearchCallComponent } from './navigation/marketingnav/submit-search-call/search-call/search-call.component';
-import { SubmitCallComponent } from './navigation/marketingnav/submit-search-call/submit-call/submit-call.component';
 
 
 export function getAuthServiceConfigs() {
@@ -104,9 +102,7 @@ const appRoutes: Routes = [
     TableComponent,
     EditProfileComponent,
     SubmitSearchCallComponent,
-    FollowUpsTodayComponent,
-    SearchCallComponent,
-    SubmitCallComponent
+    FollowUpsTodayComponent
 ],
   imports: [
     BrowserModule,
