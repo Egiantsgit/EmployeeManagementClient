@@ -1,0 +1,8 @@
+<div class="container">
+  <div class= "name">
+       HI {{profileData.Candidate | uppercase}}
+  </div>
+  <div class="dateandID">
+     <span id="date" style="color: #219DE5">Last Login:</span> {{ today | date: 'short' }}  <span style="padding: 10px;"> |  </span>    <span id="id" style="color: #219DE5">Employee ID:</span> {{profileData.EmployeeID}}
+  </div>
+</div>

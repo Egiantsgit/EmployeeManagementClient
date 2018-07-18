@@ -1,0 +1,17 @@
+.container {
+    height: 350px;
+    background-color: #DDF1FF;
+    margin-top: 10px;
+}
+
+.piechart {
+
+    height: 250px;
+    width: 550px;
+}
+
+.header {
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 10px;
+}

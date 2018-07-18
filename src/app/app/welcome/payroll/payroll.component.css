@@ -1,0 +1,19 @@
+.container {
+    height: 300px;
+    background-color: #DDF1FF;
+    margin-top: 10px;
+}
+
+.heading {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: medium;
+}
+
+
+#payrolldashboard {
+   display: block;
+   height: auto;
+   padding: auto;
+   width: 500px; height: 600px;
+}

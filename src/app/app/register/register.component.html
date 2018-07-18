@@ -1,0 +1,635 @@
+<body>
+	<div class="container">
+		<ul class="nav nav-pills">
+			<li [ngClass]="{'active': id === 1 }" id=1><a data-toggle="">Personal
+					Details >></a></li>
+			<li [ngClass]="{'active': id === 2 }" id=2><a data-toggle="">Education
+					Details >></a></li>
+			<li [ngClass]="{'active': id === 3 }" id=3><a data-toggle="">Immigration
+					Details >></a></li>
+			<li [ngClass]="{'active': id === 4 }" id=4><a data-toggle="">Work
+					Experience</a></li>
+		</ul>
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<!---------------------------------------------------------------- Personal Form ----------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+		<div class="tab-content">
+			<div id="personal" class="tab-pane fade in active">
+				<form [formGroup]="user" (ngSubmit)="saveUserInfo(1)">
+				<fieldset formGroupName="userPersonalDetails">	
+					<h3 align="left" class="col-sm-offset-0" style="color: skyblue">
+						Personal Information</h3>
+					<div class="container" id="personalInfo">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-3 form-group">
+											<label>Name as in Passport</label> <input type="text"
+												placeholder="First Name" class="form-control"
+												formControlName="firstName">
+										</div>
+										<div class="col-sm-3 form-group">
+											<label></label> <input type="text" placeholder="Middle"
+												class="form-control" formControlName="middleName">
+										</div>
+										<div class="col-sm-3 form-group">
+											<label></label> <input type="text" placeholder="Last Name"
+												class="form-control" formControlName="lastName">
+										</div>
+										<div class="col-sm-3 form-group">
+											<label>Gender</label> <input type="text" placeholder="Gender"
+												class="form-control" formControlName="gender">
+										</div>
+										<div class="col-sm-3 form-group">
+											<label>Date Of Birth</label> <input type="date"
+												placeholder="date of Birth" class="form-control"
+												formControlName="dateOfBirth">
+										</div>
+										<div class="col-sm-3 form-group">
+											<label>Nationality</label> <input type="text" placeholder=""
+												class="form-control" formControlName="nationality">
+										</div>
+										<div class="col-sm-3 form-group">
+											<label>SSN</label> <input type="number" placeholder=""
+												class="form-control" formControlName="ssn">
+										</div>
+										<div class="col-sm-3 form-group">
+											<label>Marital Status</label> <input type="text"
+												placeholder="" class="form-control"
+												formControlName="maritalStatus">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<fieldset formGroupName="primaryAddress">	
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-9 form-group">
+											<label>Primary Contact Address in USA for NON US
+												Citizen</label>
+											<input type="text" placeholder="Line 1"
+												class="form-control" formControlName="line1">
+												<input type="text" placeholder="Line 2"
+												class="form-control" formControlName="line2">
+												<input type="text" placeholder="Line 3"
+												class="form-control" formControlName="line3">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text" placeholder="City/Town"
+												class="form-control" formControlName="city">
+										</div>
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text" placeholder="State"
+												class="form-control" formControlName="state">
+										</div>
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text" placeholder="Postal Code"
+												class="form-control" formControlName="postalCode">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text" placeholder="Phone"
+												class="form-control" formControlName="phoneNo">
+										</div>
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text"
+												placeholder="Alternate Phone (Optional)"
+												class="form-control" formControlName="alternatePhoneNo">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<fieldset formGroupName="secondaryAddress">	
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-9 form-group">
+											<label>Contact Address in Home Country</label>
+											<input type="text" placeholder="Line 1"
+												class="form-control" formControlName="line1">
+												<input type="text" placeholder="Line 2"
+												class="form-control" formControlName="line2">
+												<input type="text" placeholder="Line 3"
+												class="form-control" formControlName="line3">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text" placeholder="City/Town"
+												class="form-control" formControlName="city">
+										</div>
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text" placeholder="State"
+												class="form-control" formControlName="state">
+										</div>
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text" placeholder="Postal Code"
+												class="form-control" formControlName="postalCode">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text" placeholder="Phone"
+												class="form-control" formControlName="phoneNo">
+										</div>
+										<div class="col-sm-4 form-group">
+											<label></label> <input type="text"
+												placeholder="Alternate Phone (Optional)"
+												class="form-control" formControlName="alternatePhoneNo">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Mobile Number</label> <input type="text"
+												placeholder="" class="form-control" formControlName="personalPhoneNo">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Driving Licence or State Id</label> <input type="file"
+												placeholder="Driving Licence" class="form-control" name="license">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Land Line</label> <input type="text" placeholder="Land Line"
+												class="form-control" formControlName="workPhoneNo">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label> Bank Statement </label> <input type="file"
+												placeholder="Bank Statement" class="form-control" name="bankStatement">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Email </label> <input type="text" placeholder="Email"
+												class="form-control" formControlName="emailId">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Save</button>
+						<button [disabled]="personalNextBtn" type="button" class="btn btn-primary"
+							href="#edu" data-toggle="pill" (click)="(id=2)">Next</button>
+					</div>
+				</fieldset>	
+				</form>
+			</div>
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+			<!---------------------------------------------------------------- Educational Form -------------------------------------------------------------------------->
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+			<div id="edu" class="tab-pane fade"
+				[ngClass]="{'in active': id === 2 }">
+				<form [formGroup]="user" (ngSubmit)="saveUserInfo(2)">
+				<fieldset formGroupName="userEducationDetails">	
+					<h3 align="left" class="col-sm-offset-0" style="color: skyblue">
+						Education Information</h3>
+					<fieldset formGroupName="masters">		
+					<label>Masters Degree</label>
+					<div class="container ">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-12 form-group">
+											<label>Year or expected year of graduation and Month
+												of graduation</label> <input type="text" placeholder=""
+												class="form-control" name="gradYearMonth" formControlName=gradYearMonth>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Major of degree</label> <input type="text"
+												placeholder="" class="form-control" name="majorDegree" formControlName="majorDegree">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>University</label> <input type="text" placeholder=""
+												class="form-control" name="university" formControlName="university">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="col">
+										<div class="col-sm-9 form-group">
+											<label>University Address</label>
+											<textarea placeholder="Enter Address Here.." rows="2"
+												class="form-control" name="universityAddress" formControlName="universityAddress"></textarea>
+										</div>
+									</div>
+									<div class="row col-sm-3">
+										<div class="col-sm-9 form-group">
+											<label></label> <input type="text" placeholder="GPA"
+												class="form-control" name="gpa" formControlName="gpa">
+										</div>
+										<div class="col-sm-9 form-group">
+											<label>Start year&Month</label> <input type="month"
+												placeholder="Start year and Month" class="form-control" name="startYearMonth" formControlName="startYearMonth">
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="col-sm-6 form-group">
+											<label>Upload College Official Transcript</label> <input
+												type="file" placeholder="">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Upload College degree</label> <input type="file"
+												placeholder="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<fieldset formGroupName="bachelors">	
+					<label>Bachelors Degree</label>
+					<div class="container ">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-12 form-group">
+											<label>Year or expected year of graduation and Month
+												of graduation</label> <input type="text" placeholder=""
+												class="form-control" name="gradYearMonth" formControlName="gradYearMonth">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Major of degree</label> <input type="text"
+												placeholder="" class="form-control" name="majorDegree" formControlName="majorDegree">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>University</label> <input type="text" placeholder=""
+												class="form-control" name="university" formControlName="university">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="col">
+										<div class="col-sm-9 form-group">
+											<label>University Address</label>
+											<textarea placeholder="Enter Address Here.." rows="2"
+												class="form-control"  name="universityAddress" formControlName="universityAddress"></textarea>
+										</div>
+									</div>
+									<div class="row col-sm-3">
+										<div class="col-sm-9 form-group">
+											<label></label> <input type="text" placeholder="GPA"
+												class="form-control" name="gpa" formControlName="gpa">
+										</div>
+										<div class="col-sm-9 form-group">
+											<label>Start Year&Month</label> <input type="month"
+												placeholder="Start year and Month" class="form-control" name="startYearMonth" formControlName="startYearMonth">
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="col-sm-6 form-group">
+											<label>Upload College Official Transcript</label> <input
+												type="file" placeholder="">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Upload College degree</label> <input type="file"
+												placeholder="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<fieldset formGroupName="intermediate">
+					<label>Intermediate Education</label>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-12 form-group">
+											<label>College</label> <input type="text" placeholder=""
+												class="form-control" name="collegeName" formControlName="collegeName">
+
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Start Year&Month</label> <input type="month"
+												placeholder="" class="form-control" name="startYearMonth" formControlName="startYearMonth">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Start Year&Month</label> <input type="month"
+												placeholder="" class="form-control" name="endYearMonth" formControlName="endYearMonth">
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="col">
+										<div class="col-sm-9 form-group">
+											<label>College Address</label>
+											<textarea placeholder="Enter Address Here.." rows="2"
+												class="form-control" name="collegeAddress" formControlName="collegeAddress"></textarea>
+										</div>
+									</div>
+									<div class="row col-sm-3">
+										<div class="col-sm-9 form-group">
+											<label></label> <input type="text" placeholder="Postal code"
+												class="form-control" name="postalCode" formControlName="postalCode">
+										</div>
+										<div class="col-sm-9 form-group">
+											<label></label> <input type="text" placeholder="Land Mark"
+												class="form-control" name="landMark" formControlName="landMark">
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="col-sm-6 form-group">
+											<label>Upload Marks List</label> <input type="file"
+												placeholder="">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Upload Intermediate Certificates</label> <input
+												type="file" placeholder="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<div class="modal-footer">
+						<button href="#personal" data-toggle="pill" (click)="(id=1)"
+							type="button" class="btn btn-primary">Back</button>
+						<button type="submit" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-primary" href="#immi"
+							data-toggle="pill" (click)="(id=3)" [disabled]="eduNextBtn">Next</button>
+					</div>
+					</fieldset>
+				</form>
+			</div>
+
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+			<!---------------------------------------------------------------- Immigration Form -------------------------------------------------------------------------->
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+			<div id="immi" class="tab-pane fade"
+				[ngClass]="{'in active': id === 3 }">
+					<form [formGroup]="user" (ngSubmit)="saveUserInfo(3)">
+					<fieldset formGroupName="userImmigrationDetails">
+					<h3 align="left" class="col-sm-offset-0" style="color: skyblue">Immigration
+					Details</h3>
+				<div class="container ">
+					<div class="col-lg-12 well">
+						<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Country of Birth</label> <input type="text"
+												placeholder="" class="form-control" name="countryOfBirth" formControlName="countryOfBirth">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Passport Expiry Date</label> <input type="text"
+												placeholder="" class="form-control"
+												name="passportExpiryDate" formControlName="passportExpiryDate">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Passport Issued Country</label> <input type="text"
+												placeholder="" class="form-control"
+												name="passportIssuedCountry" formControlName="passportIssuedCountry">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>I-94 Number</label> <input type="text" placeholder=""
+												class="form-control" name="i94Number" formControlName="i94Number">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Current Status</label> <input type="text"
+												placeholder="" class="form-control"
+												name="currentStatus" formControlName="currentStatus">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Current Status validity</label> <input type="text"
+												placeholder="" class="form-control"
+												name="currentStatusValidity" formControlName="currentStatusValidity">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>OPT Start Date</label> <input type="date"
+												placeholder="" class="form-control"
+												name="optStartDate" formControlName="optStartDate">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>OPT End Date</label> <input type="date" placeholder=""
+												class="form-control" name="optEndDate" formControlName="optEndDate">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>H1 Start Date</label> <input type="date"
+												placeholder="" class="form-control"
+												name="h1bStartDate" formControlName="h1bStartDate">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>H1b End Ddte</label> <input type="date" placeholder=""
+												class="form-control" name="h1bEndDate" formControlName="h1bEndDate">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Upload Passport</label> <input type="file"
+												placeholder="" class="" name="uploadPassport">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Upload US visa</label> <input type="file"
+												placeholder="" class="" name="uploadUSVisa">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Upload I-94 Document</label> <input type="file"
+												placeholder="" class="" name="uploadI94Document">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Upload All I-20's</label> <input type="file"
+												placeholder="" class="" name="uploadAllI20s">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Upload Previous I797</label> <input type="file"
+												placeholder="" class="" name="uploadPreviousI797">
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button href="#edu" data-toggle="pill" (click)="(id=2)"
+						type="button" class="btn btn-primary">Back</button>
+					<button href="#immi"  type="submit" class="btn btn-primary">Save</button>
+					<button type="button" class="btn btn-primary" href="#work"
+						data-toggle="pill" (click)="(id=4)" [disabled]="immigNextBtn">Next</button>
+				</div>
+				</fieldset>
+				</form>
+			</div>
+
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+			<!---------------------------------------------------------------- Work Experience Form -------------------------------------------------------------------------->
+			<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+			<div id="work" class="tab-pane fade"
+				[ngClass]="{'in active': id === 4 }">
+				<h3 align="left" class="col-sm-offset-0" style="color: skyblue">Work
+					Experience Details</h3>
+				<br>
+				<form [formGroup]="user" (ngSubmit)="saveUserInfo(4)">
+				<fieldset formGroupName="userWorkExperience">
+				<div class="container ">
+					<div class="col-lg-12 well">
+						<div class="row">
+							<form>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Total Years Of Experience</label> <input type="text"
+												placeholder="Years and Months" class="form-control" name="totalExp" formControlName="totalExp">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Field of Previous work Experience</label> <input
+												type="text" placeholder="Years and Months"
+												class="form-control" name="previousFieldOfExp" formControlName="previousFieldOfExp">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			
+					
+				<form [formGroup]="employeeForm">
+					<div formArrayName="itemRows">
+						<div
+						*ngFor="let itemrow of employeeForm.controls.itemRows.controls; let i=index"
+							[formGroupName]="i">
+							<h5 align="left" class="col-sm-3 form-group">
+								<b>Company Details #{{ i + 1 }}</b>
+							</h5>
+							<div class="container ">
+								<div class="col-lg-12 well">
+									<div class="row">
+											<div class="col-sm-12">
+												<div class="row">
+													<div class="col-sm-6 form-group">
+														<label>Company name</label> 
+														<input type="text"
+															placeholder="" class="form-control" name="companyName" formControlName="companyName">
+														
+								
+													</div>
+													<div class="col-sm-6 form-group">
+														<label>Start Year and Month</label> <input type="month"
+															placeholder="" class="form-control" name="startYear" formControlName="startYear">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-6 form-group">
+														<label>Company Location</label> <input type="text"
+															placeholder="" class="form-control" name="companyLocation" formControlName="companyLocation">
+
+													</div>
+													<div class="col-sm-6 form-group">
+														<label>Upload Experience Letter</label> <input type="file"
+															placeholder=""  formControlName="offerLetter">
+													</div>
+												</div>
+												<div style="margin-left:94%">
+													<button type="button" (click)="addNewRow()" class="btn btn-primary">+</button>
+													<button
+													*ngIf="employeeForm.controls.itemRows.controls.length > 1"
+													(click)="deleteRow(i)" class="btn btn-danger">-</button>
+												     </div>
+												</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				</fieldset>
+				<div class="modal-footer">
+					<button href="#immi" data-toggle="pill" (click)="(id=3)"
+						type="button" class="btn btn-primary">Back</button>
+					<button type="submit" class="btn btn-primary">Save</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<div class="homefooter">
+	<app-home-footer></app-home-footer>
+</div>

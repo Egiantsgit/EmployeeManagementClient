@@ -1,0 +1,11 @@
+<div class="panel-group">
+	<div class="panel panel-primary">
+		<ag-grid-angular #agGrid style="height: 400px;"
+			class="data-grid ag-theme-balham-dark" [enableSorting]="true"
+			[enableFilter]="true" [columnDefs]="columnDefs"
+			[enableColResize]="true" (gridReady)="onGridReady($event)"
+			(rowDoubleClicked)="editFunc()"
+			[enterMovesDownAfterEdit]="true" [enterMovesDown]="true">
+		</ag-grid-angular>
+	</div>
+</div>

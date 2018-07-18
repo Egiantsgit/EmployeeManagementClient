@@ -1,0 +1,62 @@
+.container{
+    height: 350px;
+    background-color: #F7F6F4;
+    margin-top: 10px;
+}
+
+#tasks {
+    width:540px;
+    display:block;
+    float: left;
+    margin-left: 10px;
+}
+
+#overduetasks {
+    width:540px;
+    display:block;
+    float: right;
+
+}
+
+#heading {
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: medium;
+    margin-top: 10px;
+}
+
+.subheading {
+    font-size: small;
+    color:  #219DE5;
+    font-weight: bold;
+}
+
+table, th, tr, td{
+    border: ridge 1px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#taskname {
+    font-weight: bold;
+    color: #219DE5;
+    font-size: medium;
+}
+
+#rightheading {
+    font-weight: bold;
+    color: #219DE5;
+}
+
+#contact {
+    color: black;
+    font-size: small;
+}
+
+#duerightheading {
+    color: red;
+    font-weight: bold;
+}

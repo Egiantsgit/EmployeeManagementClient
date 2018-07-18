@@ -1,0 +1,26 @@
+.container {
+    height: 300px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.heading {
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: medium;
+     margin-top: 10px;
+}
+
+#type, #status, #date, #completion {
+ 
+    width: 25%;
+    height: 75px;
+    align-content: center;
+    float: left;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#content {
+    margin-top: 20px;
+}

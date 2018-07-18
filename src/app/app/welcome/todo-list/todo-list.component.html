@@ -1,0 +1,103 @@
+<div class="container">
+  <div id="heading"> TODO LISTS</div>
+  <!-- <div id="tasks">
+    <table>
+      <thead>
+        <tr>
+
+          <th>
+            <div id="heading">TODO TASK</div>
+            <div class="subheading">
+              Please let the admin know if any of the items are already completed and still showing in dash board </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of todoTasks">
+          <td><div style="float: left" id ="taskname">{{ task.taskname }}</div>
+              <div style="float: right" id = "rightheading">Submit your documents<div id = "contact">
+                   Contact Task Manger
+              </div></div>
+          </td>
+        </tr>
+      </tbody>
+      </table>
+  </div> -->
+
+  <div>
+      <div class="row" >
+          <div class="col-sm-6" >
+            <div class="card">
+              <div class="card-body">
+                  <table>
+                      <thead>
+                        <tr>               
+                          <th>
+                            <div id="heading">TODO TASK</div>
+                            <div class="subheading">
+                              Please let the admin know if any of the items are already completed and still showing in dash board </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let task of todoTasks">
+                          <td><div style="float: left" id ="taskname">{{ task.taskname }}</div>
+                              <div style="float: right" id = "rightheading">Submit your documents<div id = "contact">
+                                   Contact Task Manger
+                              </div></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                      </table>
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                  <table>
+                      <thead>
+                        <tr>
+                          <th>
+                            <div id="heading">OVERDUE TASK</div>
+                            <div class="subheading">
+                              Please let the admin know if any of the items are already completed and still showing in dash board </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let task of overdueTasks">
+                          <td><div style="float: left" id ="taskname">{{ task.taskname }}</div>
+                            <div style="float: right" id = "duerightheading"> Due Date: {{task.duedate}}<div id = "contact">
+                                Contact Task Manger
+                           </div></div></td>
+            
+                        </tr>
+                      </tbody>
+                      </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- <table>
+          <thead>
+            <tr>
+              <th>
+                <div id="heading">OVERDUE TASK</div>
+                <div class="subheading">
+                  Please let the admin know if any of the items are already completed and still showing in dash board </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let task of overdueTasks">
+              <td><div style="float: left" id ="taskname">{{ task.taskname }}</div>
+                <div style="float: right" id = "duerightheading"> Due Date: {{task.duedate}}<div id = "contact">
+                    Contact Task Manger
+               </div></div></td>
+
+            </tr>
+          </tbody>
+          </table> -->
+</div>
