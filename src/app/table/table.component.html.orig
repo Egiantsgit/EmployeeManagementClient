@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+<ag-grid-angular 
+#agGrid
+    style="width: 69%; height: 400px;" 
+    class="data-grid ag-theme-balham-dark" 
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [columnDefs]="columnDefs"
+    [enableColResize]="true"
+    (gridReady)="onGridReady($event)"
+    
+    >
+</ag-grid-angular>
+=======
+<div class="panel-group">
+	<div class="panel panel-primary">
+		<ag-grid-angular #agGrid style="height: 400px;"
+			class="data-grid ag-theme-balham-dark" [enableSorting]="true"
+			[enableFilter]="true" [columnDefs]="columnDefs"
+			[enableColResize]="true" (gridReady)="onGridReady($event)"
+			(rowDoubleClicked)="editFunc()"
+			[enterMovesDownAfterEdit]="true" [enterMovesDown]="true">
+		</ag-grid-angular>
+	</div>
+</div>
+>>>>>>> dc293aa71b9619ceb40b4f6d2b86120fce5555c9

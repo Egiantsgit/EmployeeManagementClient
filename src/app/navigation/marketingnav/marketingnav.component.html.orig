@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<h2 class="bg">
+	<b> {{profileData.Candidate | uppercase}} MARKETING PLAN </b>
+</h2>
+<div class="row">
+	<div class="col-md-8">
+		<div class="col-md-12">
+			<app-upcoming-events></app-upcoming-events>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="col-md-12">
+			<!-- Add Graph which shows marketing information based on the app-table data -->
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<div class="col-md-12">
+			<app-submit-search-call></app-submit-search-call>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="col-md-12">
+			<!-- Add Follow up's today table -->
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-8">
+		<div class="col-md-12">
+			<app-table></app-table>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="col-md-12">
+			<div class="panel-group">
+				<div class="panel panel-primary">
+					<div class="box">
+						<b>"THE FIRST STEP IN EXCEEDING YOUR CUSTOMER'S EXPECTATIONS
+							IS TO KNOW THOSE EXPECTATIONS."</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<img src="assets/marketing footer image.png" class="img-fluid"
+	alt="Responsive image" width="98%" height=50%>
+<app-home-footer></app-home-footer>

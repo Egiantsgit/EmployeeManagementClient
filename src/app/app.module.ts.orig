@@ -24,6 +24,7 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { AgGridModule } from 'ag-grid-angular';
+import {UpcomingEventsComponent} from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 
 import {
   SocialLoginModule,
@@ -37,10 +38,13 @@ import { PendingRequestComponent } from './welcome/pending-request/pending-reque
 import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { TableComponent } from './table/table.component';
 import { EditProfileComponent } from './navbar/edit-profile/edit-profile.component';
-import { SubmitSearchCallComponent } from './navigation/marketingnav/submit-search-call/submit-search-call.component';
-import { GraphComponent } from './navigation/marketingnav/graph/graph.component';
+<<<<<<< .merge_file_a12816
 
+
+=======
 import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
+import { SubmitSearchCallComponent } from './navigation/marketingnav/submit-search-call/submit-search-call.component';
+>>>>>>> .merge_file_a05800
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -97,14 +101,17 @@ const appRoutes: Routes = [
     PayrollnavComponent,
     TasksComponent,
     MarketingnavComponent,
+<<<<<<< .merge_file_a12816
+    HomeFooterComponent,UpcomingEventsComponent,
+    TableComponent,
+    EditProfileComponent
+=======
     HomeFooterComponent,
     UpcomingEventsComponent,
     TableComponent,
     EditProfileComponent,
-    SubmitSearchCallComponent,
-    GraphComponent,
-    
-    
+    SubmitSearchCallComponent
+>>>>>>> .merge_file_a05800
 ],
   imports: [
     BrowserModule,
