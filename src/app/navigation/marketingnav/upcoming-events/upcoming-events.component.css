@@ -9,9 +9,10 @@
 .container{
     width:100%;
     height:50%;
+    
 }
 .btn-primary{
-    width:65%;
+    width: 65%;
     background-color: #219DE5;
     text-align: justify;
 }

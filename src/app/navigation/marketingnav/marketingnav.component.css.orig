@@ -1,15 +1,13 @@
 .bg {
 	height: 140px;
-	width: 99%;
 	text-align: center;
 	padding: 50px;
-	background-size: 450px;
+	background-size: 500px;
 	background-position: right;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(to right, white 0%, black 100%),
 		url('/assets/chess\ logo.jpg');
 	background-blend-mode: screen;
-	margin: 0%;
 }
 .box{
 	width: 100%;
@@ -20,5 +18,4 @@
 	font-size: 30px;
 	background-color: rgb(90, 186, 241);
 	color: white;
-	
 }

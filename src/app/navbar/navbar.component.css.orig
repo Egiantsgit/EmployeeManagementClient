@@ -1,19 +1,20 @@
 .navbar-custom {
+
     background-color :#219DE5;
     color: white;
     border: 0ch;
     padding: 0px;
-    margin: 0%;
 
 }
 
 li a {
     color: white;
+
 }
 
 li{
     padding-left: 20px;
-    padding-right: 20px;;
+    padding-right: 20px;
 }
 
 .dropbtn {
@@ -34,7 +35,7 @@ li{
 .show {display: block;}
 .dropdown-item{
     background-color: #219DE5;
-    width: 200%;
+    width: 200px;
 }
 .dropdown-menu{
     background-color: #219DE5;
