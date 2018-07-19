@@ -1,0 +1,56 @@
+<div class="panel-group">
+	<div class="panel panel-primary">
+		<div class="panel-heading" style="background-color: #219DE5">
+			<b>Upcoming Events</b>
+		</div>
+		<div class="panel-body" *ngFor="let event of upcomingevents">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form>
+						<div class="row">
+							<div class="col-md-2">
+								<div class="form-group">
+
+									<b><input type="text" class="btn btn-primary"
+										name="lastName" value={{event.date}} disabled></b>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-4">
+											<label>Client Name</label>
+										</div>
+										<div class="col-md-8">
+											<b><input type="text" class="form-control"
+												name="lastName" value={{event.client}} disabled></b>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-6">
+											<label>Vendor Name</label>
+										</div>
+										<div class="col-md-6">
+											<b><input type="text" class="form-control"
+												name="lastName" value={{event.vendorName}} disabled></b>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h6 class="panel-word">
+							<b>{{event.description}} </b> <b class="panel-bold">it's a
+								{{event.callType}} call <i class="fa fa-comment"
+								style="font-size: 20px; color: #219DE5"></i>
+							</b>
+						</h6>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -41,6 +41,8 @@ import { SubmitSearchCallComponent } from './navigation/marketingnav/submit-sear
 import { GraphComponent } from './navigation/marketingnav/graph/graph.component';
 
 import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
+import { FollowUpsTodayComponent } from './navigation/marketingnav/follow-ups-today/follow-ups-today.component';
+
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -105,6 +107,7 @@ const appRoutes: Routes = [
     GraphComponent,
     
     
+    FollowUpsTodayComponent
 ],
   imports: [
     BrowserModule,

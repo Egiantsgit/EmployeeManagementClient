@@ -1,0 +1,31 @@
+/* footer{
+    position: fixed;
+    bottom: 0;
+    color: #383838;
+    background-color:black;
+    width: 2000px;
+}
+
+footer nav{
+    padding: 10px;
+}
+
+footer nav ul li{
+    display: inline;
+}
+
+footer nav ul{
+    text-align: center;
+} */
+
+footer {
+    width: 100%;
+    height: 40px;
+    background-color:black;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+}
+
+
+

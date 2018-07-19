@@ -1,0 +1,51 @@
+<nav class="navbar navbar-custom">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+          <li ><a [routerLink]="['/home']">HOME</a></li>
+          <li ><a [routerLink]="['/payroll']">PAYROLL</a></li>
+          <li ><a [routerLink]="['/marketing']">MARKETING</a></li>
+          <li ><a [routerLink]="['/tasks']">MY TASKS</a></li>
+          <li ><a [routerLink]="['/requestus']">REQUEST US</a></li>
+          <li ><a [routerLink]="['/timesheet']">REPORT TIME SHEET</a></li>
+          <li ><a [routerLink]="['/statusreport']">WEEKLY STATUS REPORT</a></li>
+          
+          <li>
+            <a class="dropdown">
+              <button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
+                PROFILE
+              </button><i class="fa fa-user-circle"></i>
+              <div class="dropdown-menu">
+                <li class="dropdown-item" href="#">{{loggedUsedData.Candidate}}</li>
+                <li class="dropdown-item"><a [routerLink]="['/edit-profile']">Edit profile</a></li>
+                <li class="dropdown-item"><a [routerLink]="['/login']">Logout</a></li>
+              </div>
+            </a>
+          </li>
+          
+      </ul>
+    </div>
+  </nav>
+
+<!-- 
+
+<div class="nav col-md">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <ul>
+      <li ><a [routerLink]="['/home']">HOME</a></li>
+      <li ><a [routerLink]="['/payroll']">PAYROLL</a></li>
+      <li ><a [routerLink]="['/marketing']">MARKETING</a></li>
+      <li ><a [routerLink]="['/tasks']">MY TASKS</a></li>
+      <li ><a [routerLink]="['/requestus']">REQUEST US</a></li>
+      <li ><a [routerLink]="['/timesheet']">REPORT TIME SHEET</a></li>
+      <li ><a [routerLink]="['/statusreport']">WEEKLY STATUS REPORT</a></li>
+      <li><a>PROFILE  <i class="fa fa-user-circle"></i></a></li>
+    </ul>
+      <!-- <ul class="nav navbar-nav navbar-right" style = "color: white; padding-top: 10px; margin-right: 10px;">
+        <li>Welcome {{loggedUsedData.Candidate[0].demographic.name.firstName}}</li>
+        <li style = "margin-left: 10px">Log out</li>
+    </ul> -->
+    <!-- </div>
+    </nav>
+</div> --> 
+
