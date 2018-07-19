@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MarketingService } from '../../../shared/marketing.service';
+import { FollowupsTodayService } from '../../../shared/followups-today.service';
 @Component({
   selector: 'app-follow-ups-today',
   templateUrl: './follow-ups-today.component.html',
@@ -12,7 +13,7 @@ export class FollowUpsTodayComponent implements OnInit {
   private rowData: any[];
   private frameworkComponents;
 
-  constructor(private martketingData: MarketingService) {
+  constructor(private followupsService : FollowupsTodayService) {
     this.columnDefs = [
       {
         headerName: 'Call ID',
@@ -54,7 +55,7 @@ export class FollowUpsTodayComponent implements OnInit {
    onGridReady(params) {
      this.gridApi = params.api;
      this.gridColumnApi = params.ColumnApi;
-     this.martketingData.getMarketingData().subscribe(
+     this.followupsService.getFOllowUpsTodayData().subscribe(
         (data: any) => {
           const rowData = data.marketingData;
           params.api.setRowData(rowData);

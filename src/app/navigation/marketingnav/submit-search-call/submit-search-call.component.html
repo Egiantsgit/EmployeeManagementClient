@@ -14,20 +14,19 @@
 							<div class="col-sm-4">
 								<div class="input-group">
 									<input class="form-control" type="date" placeholder="Enter Date" name="date" #date="ngModel" [(ngModel)]="vendorService.selectedVendor.date" required/>
-									<div class="validation-error" *ngIf="date.invalid && date.touched">This filed is required</div>	
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Vendor Organization</label>
 							<div class="col-sm-8">
-    						<input class="form-control" placeholder="Enter Organization Name" name="vendorOrganization" #vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.vendorOrganization">
+    						<input class="form-control" placeholder="Enter Organization Name" name="vendorOrganization" #vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.vendorOrganization" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Vendor	Contact Name </label>
 							<div class="col-sm-8">
-								<input class="form-control" placeholder="Enter Vendor Name" name="vendorContactName" #vendorContactName="ngModel" [(ngModel)]="vendorService.selectedVendor.vendorContactName">
+								<input class="form-control" placeholder="Enter Vendor Name" name="vendorContactName" #vendorContactName="ngModel" [(ngModel)]="vendorService.selectedVendor.vendorContactName" required>
 							</div>
 						</div>
 						<div class="form-group phone-number">
@@ -36,25 +35,25 @@
 								<input type="tel" class="form-control" size="3" value="" maxlength="3" required="required" title="">
 							</div> -->
 							<div class="col-md-8">
-								<input class="form-control" type="number"  required="required" name="phone" #name="ngModel" [(ngModel)]="vendorService.selectedVendor.name">
+								<input class="form-control" type="number"  required="required" name="phone" #name="ngModel" [(ngModel)]="vendorService.selectedVendor.name" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Contact Email Id</label>
 							<div class="col-sm-8">
-								<input class="form-control" placeholder="Enter Email Id" name="contactEmail" #contactEmail="ngModel" [(ngModel)]="vendorService.selectedVendor.contactEmail">
+								<input class="form-control" placeholder="Enter Email Id" name="contactEmail" #contactEmail="ngModel" [(ngModel)]="vendorService.selectedVendor.contactEmail" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Implementation Partner</label>
 							<div class="col-sm-8">
-								<input class="form-control" placeholder="Implementation Partner" name="implementationPartner" #implementationPartner="ngModel" [(ngModel)]="vendorService.selectedVendor.implementationPartner">
+								<input class="form-control" placeholder="Implementation Partner" name="implementationPartner" #implementationPartner="ngModel" [(ngModel)]="vendorService.selectedVendor.implementationPartner" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="status">Status</label>
 							<div class="col-sm-8">
-								<select class="form-control" id="status" name="status" #status="ngModel" [(ngModel)]="vendorService.selectedVendor.status">
+								<select class="form-control" id="status" name="status" #status="ngModel" [(ngModel)]="vendorService.selectedVendor.status" required>
 									<option>Submitted</option>
 									<option>Not Submitted</option>
 									<option>Pending</option>
@@ -65,22 +64,27 @@
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Client</label>
 							<div class="col-sm-8">
-								<input class="form-control" placeholder="Enter Client Name" name="client" #client="ngModel" [(ngModel)]="vendorService.selectedVendor.client">
+								<input class="form-control" placeholder="Enter Client Name" name="client" #client="ngModel" [(ngModel)]="vendorService.selectedVendor.client" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Comments</label>
 							<div class="col-sm-8">
-								<textarea class="form-control" placeholder="Enter Comments" rows="4" name="comments" #comments="ngModel" [(ngModel)]="vendorService.selectedVendor.comments"></textarea>
+								<textarea class="form-control" placeholder="Enter Comments" rows="4" name="comments" #comments="ngModel" [(ngModel)]="vendorService.selectedVendor.comments" required></textarea>
 							</div>
 						</div>
 						<div class="form-row">
-							<div class="form-group col-md-8">
-								<button [disabled]="!vendorForm.valid" type="submit" class="btn btn-lg btn-block btn-info"><i class="fa fa-floppy-o"></i>Save</button>
+							<div class="form-group col-md-6">
+								
 							</div>
-							<div class="form-group col-md-4">
-									<button type="button" class="btn btn-lg btn-block btn-primary" (click)="resetForm(vendorForm)"><i class="fa fa-repeat"></i>Reset</button>
-							</div>
+							<div class="form-group col-md-6">
+								<div class="col-sm-6">
+										<button [disabled]="!vendorForm.valid" type="submit" class="btn btn-md btn-block btn-primary"><i class="fa fa-floppy-o"></i>Save</button>
+								</div>
+								<div class="col-sm-6">
+									<button type="button" class="btn btn-md btn-block btn-primary" (click)="resetForm(vendorForm)"><i class="fa fa-repeat"></i>Reset</button>
+							
+							</div>	</div>
 						</div>
 					</form>
 				</div>

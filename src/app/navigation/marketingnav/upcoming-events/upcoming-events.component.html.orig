@@ -11,7 +11,6 @@
 							<div class="col-md-2">
 								<div class="form-group">
 
-<<<<<<< HEAD
 
 <div class="container1" >
 <div class="panel panel-custom">
@@ -38,48 +37,3 @@
     
     
     
-=======
-									<b><input type="text" class="btn btn-primary"
-										name="lastName" value={{event.date}}></b>
-								</div>
-							</div>
-							<div class="col-md-5">
-								<div class="form-group">
-									<div class="row">
-										<div class="col-md-4">
-											<label>Client Name</label>
-										</div>
-										<div class="col-md-8">
-											<b><input type="text" class="form-control"
-												name="lastName" value={{event.client}}></b>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-5">
-								<div class="form-group">
-									<div class="row">
-										<div class="col-md-4">
-											<label>Vendor Name</label>
-										</div>
-										<div class="col-md-8">
-											<b><input type="text" class="form-control"
-												name="lastName" value={{event.vendorName}}></b>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<h6 class="panel-word">
-							<b>{{event.description}} </b> <b class="panel-bold">it's a
-								{{event.callType}} call <i class="fa fa-comment"
-								style="font-size: 20px; color: #219DE5"></i>
-							</b>
-						</h6>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
->>>>>>> dc293aa71b9619ceb40b4f6d2b86120fce5555c9
