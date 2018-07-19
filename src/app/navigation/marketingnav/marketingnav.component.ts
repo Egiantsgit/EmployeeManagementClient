@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
   import { ProfileService } from './../../shared/profile.service';
   import { DatasharedService } from './../../datashared.service';
-    
+  
   @Component({
     selector: 'app-marketingnav',
     templateUrl: './marketingnav.component.html',
