@@ -32,7 +32,7 @@ export class GraphComponent implements OnInit {
   public barChartLegend: any = false;
 
   public barChartData: any[] = [
-     {data: [28, 48, 40, 19, 66, 27, 90, 70, 55, 66, 70, 30], label: 'Series A'}
+     {data: [28, 45, 40, 19, 66, 27, 90, 70, 55, 66, 70, 30], label: 'Series A'}
   ];
   constructor(private payrollData: PayrolldataService) { }
 
