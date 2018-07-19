@@ -1,28 +1,25 @@
 
-
 .navbar-custom {
 
     background-color :#219DE5;
     color: white;
-    
+    border: 0ch;
+    padding: 0px;
+}
+.li a {
 
 }
 
-li a {
-    color: white;
-
-}
-
-li{
-    padding-left: 40px;
-    padding-right: 40px;
+.li{
+    padding-left: 29px;
+    padding-right: 29px;
 }
 
 .dropbtn {
     background-color: #3498DB;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 10px;
     border: none;
     cursor: pointer;
 }

@@ -1,0 +1,72 @@
+<<<<<<< .merge_file_a15168
+
+
+=======
+>>>>>>> .merge_file_a06868
+.navbar-custom {
+
+    background-color :#219DE5;
+    color: white;
+<<<<<<< .merge_file_a15168
+    
+=======
+    border: 0ch;
+    padding: 0px;
+>>>>>>> .merge_file_a06868
+
+}
+
+li a {
+    color: white;
+
+}
+
+li{
+<<<<<<< .merge_file_a15168
+    padding-left: 40px;
+    padding-right: 40px;
+=======
+    padding-left: 29px;
+    padding-right: 29px;
+>>>>>>> .merge_file_a06868
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+<<<<<<< .merge_file_a15168
+    padding: 16px;
+    font-size: 16px;
+=======
+    padding: 10px;
+    font-size: 10px;
+>>>>>>> .merge_file_a06868
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.dropdown-item{
+    background-color: #219DE5;
+    width: 200px;
+}
+.dropdown-menu{
+    background-color: #219DE5;
+    width: auto;
+}
+.dropdown{
+    color: #219DE5;
+    background-color: #219DE5;
+    
+}
+
+.dropdown-toggle {
+    color:white;
+    background-color: #219DE5;
+}

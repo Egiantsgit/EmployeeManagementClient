@@ -19,21 +19,16 @@ import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material/material.module';
-import {MaterialComponent } from './material/material.component';
+import { MaterialComponent } from './material/material.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { AgGridModule } from 'ag-grid-angular';
-import {UpcomingEventsComponent} from './navigation/marketingnav/upcoming-events/upcoming-events.component';
-
-
-// import {FileUploadModule} from 'primeng/primeng';
 
 import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
-  FacebookLoginProvider,
 } from 'angular5-social-login';
 import { TodoListComponent } from './welcome/todo-list/todo-list.component';
 import { PayrollComponent } from './welcome/payroll/payroll.component';
@@ -42,16 +37,12 @@ import { PendingRequestComponent } from './welcome/pending-request/pending-reque
 import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { TableComponent } from './table/table.component';
 import { EditProfileComponent } from './navbar/edit-profile/edit-profile.component';
-
-
+import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
+import { SubmitSearchCallComponent } from './navigation/marketingnav/submit-search-call/submit-search-call.component';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
     [{
-      id: FacebookLoginProvider.PROVIDER_ID,
-      provider: new FacebookLoginProvider('190506228435014')
-    },
-      {
         id: GoogleLoginProvider.PROVIDER_ID,
         provider: new GoogleLoginProvider('832976957531-ufljq94h91ej37l3an2ouprfm4pmcmt7.apps.googleusercontent.com')
       },
@@ -106,7 +97,8 @@ const appRoutes: Routes = [
     MarketingnavComponent,
     HomeFooterComponent,UpcomingEventsComponent,
     TableComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    SubmitSearchCallComponent
 ],
   imports: [
     BrowserModule,
