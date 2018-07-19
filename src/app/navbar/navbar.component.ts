@@ -8,23 +8,23 @@ import { ProfileService } from './../shared/profile.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  loggedUsedData: any;
-  constructor(private profile: ProfileService){
+  profileData: any;
 
-  }
-  
+  constructor(private profile: ProfileService) {
+   }
 
   ngOnInit() {
     this.profile.getUserProfileData().subscribe(
-      (data: any) => {
-       this.loggedUsedData = data;
-      },
-      (err: any) => {
-        console.log('Could not find the user profile data');
-      }
-     );
-  }
-    
+     (data: any) => {
+      this.profileData = data;
+     },
+     (err: any) => {
+       console.log('Could not find the user profile data');
+     }
+    );
+
+
   }
 
+}
 
