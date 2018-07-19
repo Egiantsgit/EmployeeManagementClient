@@ -9,16 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpcomingEventsComponent implements OnInit {
   upcomingevents: any;
-  
   constructor(private upcomingeventsData: MarketingnavdataService) {}
 
   ngOnInit() {
     this.upcomingeventsData.getUserMaretingData().subscribe(
       (data: any) => {
         this.upcomingevents = data.eventdata;
-        
-      }
-    );
-  
-      }
+
+      });
+   }
+
 }

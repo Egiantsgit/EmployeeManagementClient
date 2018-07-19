@@ -1,10 +1,10 @@
 
-<nav class="navbar-custom">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-<li ><a [routerLink]="['/payroll']">PAYROLL</a></li>
-          <li ><a [routerLink]="['/marketing']">MARKETING</a></li>
-          <li ><a [routerLink]="['/tasks']">MY TASKS</a></li>
+<h2 class="bg">
+	<b> {{profileData.Candidate | uppercase}} MARKETING PLAN </b>
+</h2>
+<div class="row">
+	<div class="col-md-8">
+		<div class="col-md-12">
           <li ><a [routerLink]="['/requestus']">REQUEST US</a></li>
           <li ><a [routerLink]="['/timesheet']">REPORT TIME SHEET</a></li>
           <li ><a [routerLink]="['/statusreport']">WEEKLY STATUS REPORT</a></li>
@@ -16,13 +16,49 @@
 <section class="middle">
      <h2><b> {{profileData.Candidate | uppercase}} MY MARKETING PLAN</b></h2> </section>
 
-      <app-upcoming-events></app-upcoming-events>
+			<app-upcoming-events></app-upcoming-events>
       <div class="homebreak"></div>
       <app-table></app-table>
 
-      <div class="homefooter">
-        <app-home-footer></app-home-footer>
-    </div>
-      
-
-      
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="col-md-12">
+			<!-- Add Graph which shows marketing information based on the app-table data -->
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<div class="col-md-12">
+			<app-submit-search-call></app-submit-search-call>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="col-md-12">
+			<!-- Add Follow up's today table -->
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-8">
+		<div class="col-md-12">
+			<app-table></app-table>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="col-md-12">
+			<div class="panel-group">
+				<div class="panel panel-primary">
+					<div class="box">
+						<b>"THE FIRST STEP IN EXCEEDING YOUR CUSTOMER'S EXPECTATIONS
+							IS TO KNOW THOSE EXPECTATIONS."</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<img src="assets/marketing footer image.png" class="img-fluid"
+	alt="Responsive image" width="98%" height=50%>
+<app-home-footer></app-home-footer>
