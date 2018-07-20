@@ -34,6 +34,7 @@ export class SubmitSearchCallComponent implements OnInit {
     }
   }
   onSubmit(form: NgForm){
+    window.alert("form submitted");
     this.vendorService.postVendorCall(form.value)
     .subscribe(data =>{
       this.resetForm(form);
