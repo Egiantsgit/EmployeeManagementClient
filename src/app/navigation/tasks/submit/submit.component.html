@@ -1,0 +1,190 @@
+<div class="container">
+
+  <ul class="nav nav-pills">
+    <li class="active">
+      <a data-toggle="pill" href="#submit">Submit a Call</a>
+    </li>
+    <li>
+      <a data-toggle="pill" href="#search">Search a Call</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="submit" class="tab-pane fade in active">
+
+      <form class="form-horizontal">
+        <div class="form-group">
+
+          <label class="control-label col-sm-4" for="date">Date</label>
+          <div class="col-sm-4">
+            <div class="input-group">
+
+              <input type="date" class="form-control" placeholder="Enter Date" name="date" />
+              <div class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Vendor Organization</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Enter Organization Name" name="organizationName">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Vendor Contact Name </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Enter Vendor Name" name="Vendor contact Name">
+          </div>
+        </div>
+
+        <div class ="form-group phone-number">
+
+          <label class="control-label col-sm-4" for="">Phone</label>
+          <div class="col-xs-2">
+            <input type="tel" class="form-control" size="3" value="" maxlength="3"  required="required" title="">
+          </div>
+          <div class="col-xs-6">
+              <input type="tel" class="form-control" size="6" value="" maxlength="6" required="required">
+            </div>
+           
+
+        </div>
+
+           
+
+
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Contact Email Id</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" placeholder="Enter Email Id" name="emailId">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Implementation Partner</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Implementation Partner" name="partner">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="status">Status</label>
+          <div class="col-sm-8">
+            <select class="form-control" id="status">
+              <option>Submitted</option>
+              <option>Not Submitted</option>
+              <option>Pending</option>
+              <option>Rejected</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Client</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Enter Client Name" name="client">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Comments</label>
+          <div class="col-sm-8">
+            <textarea class="form-control" placeholder="Enter Comments" rows="4" name="comment"></textarea>
+          </div>
+        </div>
+        <button type="button" class="control-label col-sm-4">SAVE
+            <span class="glyphicon"></span>
+          </button>
+
+      </form>
+
+    </div>
+
+
+    <div id="search" class="tab-pane fade">
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Vendor</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Enter Vendor Name" name="vendor">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Implementation Partner</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Implementation Partner" name="partner">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Client</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Enter Client Name" name="client">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="">Submitted By</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" placeholder="Submitted by" name="submittedBy">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="status">Status</label>
+          <div class="col-sm-8">
+            <select class="form-control" id="status">
+              <option>Submitted</option>
+              <option>Not Submitted</option>
+              <option>Pending</option>
+              <option>Rejected</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+
+            <label class="control-label col-sm-4" for="date">FROM</label>
+            <div class="col-sm-2">
+              <div class="input-group">
+
+                <input type="date" class="form-control" placeholder="Enter Date" name="date" />
+                <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
+            <label class="control-label col-sm-4" for="date">TO</label>
+            <div class="col-sm-2">
+              <div class="input-group">
+
+                <input type="date" class="form-control" placeholder="Enter Date" name="date" />
+                <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button type="button" class="btn btn-primary">SEARCH
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
