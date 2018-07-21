@@ -29,16 +29,27 @@ export class SubmitSearchCallComponent implements OnInit {
       implementationPartner: '',
       status: 'Submitted',
       client: '',
-      comments: ''
+      comments: '',
+      submittedby:'',
+      vendor:'',
+      fromdate:null,
+      todate:null
+
 
     }
   }
   onSubmit(form: NgForm){
-    window.alert("form submitted");
     this.vendorService.postVendorCall(form.value)
     .subscribe(data =>{
       this.resetForm(form);
     })
   }
-
-}
+  postSearch(form : NgForm){
+    window.alert("searching the key")
+    this.vendorService.postVendorCall(form.value)
+        .subscribe(data =>{
+          this.resetForm(form);
+        })
+      }
+    
+  }
