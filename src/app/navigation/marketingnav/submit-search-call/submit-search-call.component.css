@@ -5,3 +5,7 @@
 .panel-primary{
     background-color: #DDF1FF;
 }
+.container{
+    width:100%;
+    height:600px;
+}

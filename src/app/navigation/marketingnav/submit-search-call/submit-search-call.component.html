@@ -2,72 +2,58 @@
 	<div class="panel panel-primary">
 		<div class="container">
 			<ul class="nav nav-pills">
-				<li class="active"><a data-toggle="pill" href="#submit">Submit
-						a Call</a></li>
+				<li class="active"><a data-toggle="pill" href="#submit">Submit a Call</a></li>
 				<li><a data-toggle="pill" href="#search">Search a Call</a></li>
 			</ul>
+			<div class="container">
 			<div class="tab-content">
 				<div id="submit" class="tab-pane fade in active">
-					<form class="form-horizontal">
+					<form class="form-horizontal"  (ngSubmit)='onSubmit()' #vendorForm="ngForm">
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="date">Date</label>
 							<div class="col-sm-4">
 								<div class="input-group">
-									<input type="date" class="form-control"
-										placeholder="Enter Date" name="date" />
-									<div class="input-group-addon">
-										<span class="glyphicon glyphicon-calendar"></span>
-									</div>
+									<input class="form-control" type="date" placeholder="Enter Date" name="date" #date="ngModel" [(ngModel)]="vendorService.selectedVendor.date" required/>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-sm-4" for="">Vendor
-								Organization</label>
+							<label class="control-label col-sm-4" for="">Vendor Organization</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control"
-									placeholder="Enter Organization Name" name="organizationName">
+    						<input class="form-control" placeholder="Enter Organization Name" name="vendorOrganization" #vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.vendorOrganization" required>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-sm-4" for="">Vendor
-								Contact Name </label>
+							<label class="control-label col-sm-4" for="">Vendor	Contact Name </label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control"
-									placeholder="Enter Vendor Name" name="Vendor contact Name">
+								<input class="form-control" placeholder="Enter Vendor Name" name="vendorContactName" #vendorContactName="ngModel" [(ngModel)]="vendorService.selectedVendor.vendorContactName" required>
 							</div>
 						</div>
 						<div class="form-group phone-number">
 							<label class="control-label col-sm-4" for="">Phone</label>
-							<div class="col-xs-2">
-								<input type="tel" class="form-control" size="3" value=""
-									maxlength="3" required="required" title="">
-							</div>
-							<div class="col-xs-6">
-								<input type="tel" class="form-control" size="6" value=""
-									maxlength="6" required="required">
+							<!-- <div class="col-xs-2">
+								<input type="tel" class="form-control" size="3" value="" maxlength="3" required="required" title="">
+							</div> -->
+							<div class="col-md-8">
+								<input class="form-control" type="number"  required="required" name="phone" #name="ngModel" [(ngModel)]="vendorService.selectedVendor.name" required>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-sm-4" for="">Contact
-								Email Id</label>
+							<label class="control-label col-sm-4" for="">Contact Email Id</label>
 							<div class="col-sm-8">
-								<input type="email" class="form-control"
-									placeholder="Enter Email Id" name="emailId">
+								<input class="form-control" placeholder="Enter Email Id" name="contactEmail" #contactEmail="ngModel" [(ngModel)]="vendorService.selectedVendor.contactEmail" required>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-sm-4" for="">Implementation
-								Partner</label>
+							<label class="control-label col-sm-4" for="">Implementation Partner</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control"
-									placeholder="Implementation Partner" name="partner">
+								<input class="form-control" placeholder="Implementation Partner" name="implementationPartner" #implementationPartner="ngModel" [(ngModel)]="vendorService.selectedVendor.implementationPartner" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="status">Status</label>
 							<div class="col-sm-8">
-								<select class="form-control" id="status">
+								<select class="form-control" id="status" name="status" #status="ngModel" [(ngModel)]="vendorService.selectedVendor.status" required>
 									<option>Submitted</option>
 									<option>Not Submitted</option>
 									<option>Pending</option>
@@ -78,31 +64,37 @@
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Client</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control"
-									placeholder="Enter Client Name" name="client">
+								<input class="form-control" placeholder="Enter Client Name" name="client" #client="ngModel" [(ngModel)]="vendorService.selectedVendor.client" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Comments</label>
 							<div class="col-sm-8">
-								<textarea class="form-control" placeholder="Enter Comments"
-									rows="4" name="comment"></textarea>
+								<textarea class="form-control" placeholder="Enter Comments" rows="4" name="comments" #comments="ngModel" [(ngModel)]="vendorService.selectedVendor.comments" required></textarea>
 							</div>
 						</div>
-						<div class="form-group">
-							<div class="col-sm-8">
-								<button type="button" class="btn btn-primary">Save</button>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								
 							</div>
+							<div class="form-group col-md-6">
+								<div class="col-sm-6">
+										<button [disabled]="!vendorForm.valid" type="submit" class="btn btn-md btn-block btn-primary"><i class="fa fa-floppy-o"></i>Save</button>
+								</div>
+								<div class="col-sm-6">
+									<button type="button" class="btn btn-md btn-block btn-primary" (click)="resetForm(vendorForm)"><i class="fa fa-repeat"></i>Reset</button>
+							
+							</div>	</div>
 						</div>
 					</form>
 				</div>
 				<div id="search" class="tab-pane fade">
-					<form class="form-horizontal">
+					<form class="form-horizontal"(ngSearch)='onSearch(searchForm)' #searchForm= "ngForm">
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Vendor</label>
 							<div class="col-sm-8">
 								<input type="text" class="form-control"
-									placeholder="Enter Vendor Name" name="vendor">
+									placeholder="Enter Vendor Name" name="vendor"#vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.vendor">
 							</div>
 						</div>
 						<div class="form-group">
@@ -110,27 +102,27 @@
 								Partner</label>
 							<div class="col-sm-8">
 								<input type="text" class="form-control"
-									placeholder="Implementation Partner" name="partner">
+									placeholder="Implementation Partner" name="partner"#vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.implementation">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Client</label>
 							<div class="col-sm-8">
 								<input type="text" class="form-control"
-									placeholder="Enter Client Name" name="client">
+									placeholder="Enter Client Name" name="client"#vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.client">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="">Submitted By</label>
 							<div class="col-sm-8">
 								<input type="text" class="form-control"
-									placeholder="Submitted by" name="submittedBy">
+									placeholder="Submitted by" name="submittedBy"#vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.submittedBy">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="status">Status</label>
 							<div class="col-sm-8">
-								<select class="form-control" id="status">
+								<select class="form-control" id="status" #vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.status">
 									<option>Submitted</option>
 									<option>Not Submitted</option>
 									<option>Pending</option>
@@ -144,7 +136,7 @@
 								<div class="input-group">
 
 									<input type="date" class="form-control"
-										placeholder="Enter Date" name="date" />
+										placeholder="Enter Date" name="date" #vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.date" />
 									<div class="input-group-addon">
 										<span class="glyphicon glyphicon-calendar"></span>
 									</div>
@@ -156,7 +148,7 @@
 							<div class="col-sm-2">
 								<div class="input-group">
 									<input type="date" class="form-control"
-										placeholder="Enter Date" name="date" />
+										placeholder="Enter Date" name="date" #vendorOrganization="ngModel" [(ngModel)]="vendorService.selectedVendor.date" />
 									<div class="input-group-addon">
 										<span class="glyphicon glyphicon-calendar"></span>
 									</div>
@@ -165,13 +157,21 @@
 						</div>
 						<div class="form-group">
 							<div class="col-sm-8">
-								<button type="button" class="btn btn-primary">
-									Search <span class="glyphicon glyphicon-search"></span>
-								</button>
+								<div class="col row" >
+									<div class="col-md-6"></div>
+									<div class="col-md-6">
+											<button (click)="postSearch(searchForm)" type="button" class="btn btn-primary" >
+													Search <span class="glyphicon glyphicon-search"></span>
+												</button>
+
+									</div>
+									</div>
+								
 							</div>
 						</div>
 					</form>
 				</div>
+			</div>
 			</div>
 		</div>
 	</div>
