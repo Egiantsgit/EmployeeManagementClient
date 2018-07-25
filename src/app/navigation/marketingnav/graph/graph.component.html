@@ -1,0 +1,24 @@
+
+   <div class="panel-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading" style="background-color: #219DE5">
+          <b>Graph</b>
+        </div>
+      
+          <div style="display: block" id = "payrolldashboard">
+            <canvas height="0px" class="padding"  baseChart
+                   
+                     
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                     [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    [colors]="chartColors"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+          <!-- <button (click)="randomize()">Update</button> -->
+        </div>
+  </div>
+  

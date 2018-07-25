@@ -8,13 +8,14 @@
 }
 .container{
     width:100%;
+    height:50%;
+    
 }
 .btn-primary{
-    width:50%;
+    width: 65%;
     background-color: #219DE5;
     text-align: justify;
 }
 .panel-primary{
-    background-color: aliceblue;
-    height:80%;
+    background-color: #DDF1FF;
 }
