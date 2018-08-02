@@ -2,6 +2,7 @@ import { FormGroup, FormControl, FormBuilder, FormArray } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DatasharedService } from './../datashared.service';
+import { Observable } from '../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-register',
@@ -9,6 +10,9 @@ import { DatasharedService } from './../datashared.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+    handleError(arg0: any): any {
+        throw new Error("Method not implemented.");
+    }
   id: any = 1;
   personalNextBtn: any = true;
   eduNextBtn: any = true;
@@ -17,6 +21,8 @@ export class RegisterComponent implements OnInit {
   user: FormGroup;
   addForm: FormGroup;
   employeeForm: FormGroup;
+    fileUploadService: any;
+    httpClient: any;
 
     constructor(private _fb: FormBuilder, private http: HttpClient, private dataService: DatasharedService) {
       
@@ -138,6 +144,27 @@ export class RegisterComponent implements OnInit {
     }
   }
   
+  fileToUpload: File = null;
+
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+}
+uploadFileToActivity() {
+    this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
+      // do something, if upload success
+      }, error => {
+        console.log(error);
+      });
+  }
+//   postFile(fileToUpload: File): Observable<boolean> {
+//     const endpoint = 'your-destination-url';
+//     const formData: FormData = new FormData();
+//     formData.append('fileKey', fileToUpload, fileToUpload.name);
+//     return this.httpClient
+//       .post(endpoint, formData, { headers: yourHeadersConfig })
+//       .map(() => { return true; })
+//       .catch((e) => this.handleError(e));
+// }
   saveUserInfo(input) {
  	console.log(input);
  	let data:string = "";

@@ -168,7 +168,8 @@
 										</div>
 										<div class="col-sm-6 form-group">
 											<label>Driving Licence or State Id</label> <input type="file"
-												placeholder="Driving Licence" class="form-control" name="license">
+												placeholder="Driving Licence" class="form-control" name="license"
+												(change)="handleFileInput($event.target.files,'license')">
 										</div>
 									</div>
 									<div class="row">
