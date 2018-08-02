@@ -151,7 +151,8 @@ export class RegisterComponent implements OnInit {
  		this.immigNextBtn = false;
  		data = this.user.value.userImmigrationDetails;
  	}else if(input == 4){
- 		data = this.user.value.userWorkExperience;
+         data = this.user.value.userWorkExperience;
+        //  console.log("Data Stored successfully");
     }
     let url = `/users/user/{{emailId}}`;
   	this.http.post(url, JSON.stringify(data),{headers: new HttpHeaders().set('Content-Type', 'application/json')})
