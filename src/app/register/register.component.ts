@@ -146,16 +146,23 @@ export class RegisterComponent implements OnInit {
   
   fileToUpload: File = null;
 
-  handleFileInput(files: FileList) {
+  handleFileInput(files: FileList,filename) {
+      console.log(files)
+      console.log(filename)
+      var newFileName = files[0].name + "new";
+      var formData = new FormData();
+      formData.append('file',files[0], newFileName)
+      console.log(formData)
+      
     this.fileToUpload = files.item(0);
 }
-uploadFileToActivity() {
-    this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
-      // do something, if upload success
-      }, error => {
-        console.log(error);
-      });
-  }
+// uploadFileToActivity() {
+//     this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
+//       // do something, if upload success
+//       }, error => {
+//         console.log(error);
+//       });
+//   }
 //   postFile(fileToUpload: File): Observable<boolean> {
 //     const endpoint = 'your-destination-url';
 //     const formData: FormData = new FormData();
