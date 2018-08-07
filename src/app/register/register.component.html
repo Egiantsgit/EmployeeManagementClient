@@ -168,7 +168,8 @@
 										</div>
 										<div class="col-sm-6 form-group">
 											<label>Driving Licence or State Id</label> <input type="file"
-												placeholder="Driving Licence" class="form-control" name="license">
+												placeholder="Driving Licence" class="form-control" name="license"
+												(change)="handleFileInput($event.target.files,'Driving License or State Id')">
 										</div>
 									</div>
 									<div class="row">
@@ -178,7 +179,8 @@
 										</div>
 										<div class="col-sm-6 form-group">
 											<label> Bank Statement </label> <input type="file"
-												placeholder="Bank Statement" class="form-control" name="bankStatement">
+												placeholder="Bank Statement" class="form-control" name="bankStatement"
+												(change)="handleFileInput($event.target.files,'Bank Statement')">
 										</div>
 									</div>
 									<div class="row">
@@ -259,11 +261,13 @@
 									<div class="col-sm-12">
 										<div class="col-sm-6 form-group">
 											<label>Upload College Official Transcript</label> <input
-												type="file" placeholder="">
+												type="file" placeholder=""
+												(change)="handleFileInput($event.target.files,' Masters Transcript')">
 										</div>
 										<div class="col-sm-6 form-group">
 											<label>Upload College degree</label> <input type="file"
-												placeholder="">
+												placeholder=""
+												(change)="handleFileInput($event.target.files,'Masters Degree')">
 										</div>
 									</div>
 								</div>
@@ -322,11 +326,13 @@
 									<div class="col-sm-12">
 										<div class="col-sm-6 form-group">
 											<label>Upload College Official Transcript</label> <input
-												type="file" placeholder="">
+												type="file" placeholder=""
+												(change)="handleFileInput($event.target.files,'Bachelors Transcript')">
 										</div>
 										<div class="col-sm-6 form-group">
 											<label>Upload College degree</label> <input type="file"
-												placeholder="">
+												placeholder=""
+												(change)="handleFileInput($event.target.files,'Bachelors Degree')">
 										</div>
 									</div>
 								</div>
@@ -386,11 +392,13 @@
 									<div class="col-sm-12">
 										<div class="col-sm-6 form-group">
 											<label>Upload Marks List</label> <input type="file"
-												placeholder="">
+												placeholder=""
+												(change)="handleFileInput($event.target.files,'Intermediate Marks')">
 										</div>
 										<div class="col-sm-6 form-group">
 											<label>Upload Intermediate Certificates</label> <input
-												type="file" placeholder="">
+												type="file" placeholder=""
+												(change)="handleFileInput($event.target.files,'Intermediate Certificates')">
 										</div>
 									</div>
 								</div>
@@ -494,11 +502,13 @@
 									<div class="row">
 										<div class="col-sm-6 form-group">
 											<label>Upload Passport</label> <input type="file"
-												placeholder="" class="" name="uploadPassport">
+												placeholder="" class="" name="uploadPassport"
+												(change)="handleFileInput($event.target.files,'passport')">
 										</div>
 										<div class="col-sm-6 form-group">
 											<label>Upload US visa</label> <input type="file"
-												placeholder="" class="" name="uploadUSVisa">
+												placeholder="" class="" name="uploadUSVisa"
+												(change)="handleFileInput($event.target.files,'Visa')">
 										</div>
 									</div>
 								</div>
@@ -506,11 +516,13 @@
 									<div class="row">
 										<div class="col-sm-6 form-group">
 											<label>Upload I-94 Document</label> <input type="file"
-												placeholder="" class="" name="uploadI94Document">
+												placeholder="" class="" name="uploadI94Document"
+												(change)="handleFileInput($event.target.files,'I94 Document')">
 										</div>
 										<div class="col-sm-6 form-group">
 											<label>Upload All I-20's</label> <input type="file"
-												placeholder="" class="" name="uploadAllI20s">
+												placeholder="" class="" name="uploadAllI20s"
+												(change)="handleFileInput($event.target.files,'i20 Documents')">
 										</div>
 									</div>
 								</div>
@@ -518,7 +530,8 @@
 									<div class="row">
 										<div class="col-sm-6 form-group">
 											<label>Upload Previous I797</label> <input type="file"
-												placeholder="" class="" name="uploadPreviousI797">
+												placeholder="" class="" name="uploadPreviousI797"
+												(change)="handleFileInput($event.target.files,'I797 Document')">
 										</div>
 									</div>
 								</div>
@@ -558,9 +571,8 @@
 												placeholder="Years and Months" class="form-control" name="totalExp" formControlName="totalExp">
 										</div>
 										<div class="col-sm-6 form-group">
-											<label>Field of Previous work Experience</label> <input
-												type="text" placeholder="Years and Months"
-												class="form-control" name="previousFieldOfExp" formControlName="previousFieldOfExp">
+											<label>Field of Previous work Experience</label> <input type="text"
+											 placeholder="Years and Months" class="form-control" name="previousFieldOfExp" formControlName="previousFieldOfExp">
 										</div>
 									</div>
 								</div>
@@ -603,7 +615,8 @@
 													</div>
 													<div class="col-sm-6 form-group">
 														<label>Upload Experience Letter</label> <input type="file"
-															placeholder=""  formControlName="offerLetter">
+															placeholder=""  formControlName="offerLetter"
+															(change)="handleFileInput($event.target.files,'Experience Letter')">
 													</div>
 												</div>
 												<div style="margin-left:94%">

@@ -2,6 +2,7 @@ import { FormGroup, FormControl, FormBuilder, FormArray } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DatasharedService } from './../datashared.service';
+import { Observable } from '../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-register',
@@ -9,6 +10,9 @@ import { DatasharedService } from './../datashared.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+    handleError(arg0: any): any {
+        throw new Error("Method not implemented.");
+    }
   id: any = 1;
   personalNextBtn: any = true;
   eduNextBtn: any = true;
@@ -17,6 +21,8 @@ export class RegisterComponent implements OnInit {
   user: FormGroup;
   addForm: FormGroup;
   employeeForm: FormGroup;
+    fileUploadService: any;
+    httpClient: any;
 
     constructor(private _fb: FormBuilder, private http: HttpClient, private dataService: DatasharedService) {
       
@@ -138,6 +144,39 @@ export class RegisterComponent implements OnInit {
     }
   }
   
+  fileToUpload: File = null;
+
+  handleFileInput(files: FileList,filename) {
+      console.log(files)
+      console.log(filename)
+    //   var newFileName = files[0].name + "new";
+    //   var formData = new FormData();
+    //   formData.append('file',files[0], newFileName)
+    //   console.log(formData)
+      
+    this.fileToUpload = files.item(0);
+    let url = `/users/user/{{emailId}}`;
+  	this.http.post(url, JSON.stringify(this.fileToUpload),{headers: new HttpHeaders().set('Content-Type', 'application/json')})
+  			.subscribe(
+  					res => console.log(res)
+  	);
+}
+// uploadFileToActivity() {
+//     this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
+//       // do something, if upload success
+//       }, error => {
+//         console.log(error);
+//       });
+//   }
+//   postFile(fileToUpload: File): Observable<boolean> {
+//     const endpoint = 'your-destination-url';
+//     const formData: FormData = new FormData();
+//     formData.append('fileKey', fileToUpload, fileToUpload.name);
+//     return this.httpClient
+//       .post(endpoint, formData, { headers: yourHeadersConfig })
+//       .map(() => { return true; })
+//       .catch((e) => this.handleError(e));
+// }
   saveUserInfo(input) {
  	console.log(input);
  	let data:string = "";
@@ -151,7 +190,8 @@ export class RegisterComponent implements OnInit {
  		this.immigNextBtn = false;
  		data = this.user.value.userImmigrationDetails;
  	}else if(input == 4){
- 		data = this.user.value.userWorkExperience;
+         data = this.user.value.userWorkExperience;
+        //  console.log("Data Stored successfully");
     }
     let url = `/users/user/{{emailId}}`;
   	this.http.post(url, JSON.stringify(data),{headers: new HttpHeaders().set('Content-Type', 'application/json')})
