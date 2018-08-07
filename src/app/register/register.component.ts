@@ -149,12 +149,17 @@ export class RegisterComponent implements OnInit {
   handleFileInput(files: FileList,filename) {
       console.log(files)
       console.log(filename)
-      var newFileName = files[0].name + "new";
-      var formData = new FormData();
-      formData.append('file',files[0], newFileName)
-      console.log(formData)
+    //   var newFileName = files[0].name + "new";
+    //   var formData = new FormData();
+    //   formData.append('file',files[0], newFileName)
+    //   console.log(formData)
       
     this.fileToUpload = files.item(0);
+    let url = `/users/user/{{emailId}}`;
+  	this.http.post(url, JSON.stringify(this.fileToUpload),{headers: new HttpHeaders().set('Content-Type', 'application/json')})
+  			.subscribe(
+  					res => console.log(res)
+  	);
 }
 // uploadFileToActivity() {
 //     this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
