@@ -1,0 +1,207 @@
+<app-registernavbar></app-registernavbar>
+<div class="container">
+				<form [formGroup]="user" (ngSubmit)="saveUserInfo()">
+				<fieldset formGroupName="userEducationDetails">	
+					<h3 align="left" class="col-sm-offset-0" style="color: skyblue">
+						Education Information</h3>
+					<fieldset formGroupName="masters">		
+					<label>Masters Degree</label>
+					<div class="container ">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-12 form-group">
+											<label>Year or expected year of graduation and Month
+												of graduation</label> <input type="text" placeholder=""
+												class="form-control" name="gradYearMonth" formControlName=gradYearMonth>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Major of degree</label> <input type="text"
+												placeholder="" class="form-control" name="majorDegree" formControlName="majorDegree">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>University</label> <input type="text" placeholder=""
+												class="form-control" name="university" formControlName="university">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="col">
+										<div class="col-sm-9 form-group">
+											<label>University Address</label>
+											<textarea placeholder="Enter Address Here.." rows="2"
+												class="form-control" name="universityAddress" formControlName="universityAddress"></textarea>
+										</div>
+									</div>
+									<div class="row col-sm-3">
+										<div class="col-sm-9 form-group">
+											<label></label> <input type="text" placeholder="GPA"
+												class="form-control" name="gpa" formControlName="gpa">
+										</div>
+										<div class="col-sm-9 form-group">
+											<label>Start year&Month</label> <input type="month"
+												placeholder="Start year and Month" class="form-control" name="startYearMonth" formControlName="startYearMonth">
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="col-sm-6 form-group">
+											<label>Upload College Official Transcript</label> <input
+												type="file" placeholder="">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Upload College degree</label> <input type="file"
+												placeholder="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<fieldset formGroupName="bachelors">	
+					<label>Bachelors Degree</label>
+					<div class="container ">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-12 form-group">
+											<label>Year or expected year of graduation and Month
+												of graduation</label> <input type="text" placeholder=""
+												class="form-control" name="gradYearMonth" formControlName="gradYearMonth">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Major of degree</label> <input type="text"
+												placeholder="" class="form-control" name="majorDegree" formControlName="majorDegree">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>University</label> <input type="text" placeholder=""
+												class="form-control" name="university" formControlName="university">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="col">
+										<div class="col-sm-9 form-group">
+											<label>University Address</label>
+											<textarea placeholder="Enter Address Here.." rows="2"
+												class="form-control"  name="universityAddress" formControlName="universityAddress"></textarea>
+										</div>
+									</div>
+									<div class="row col-sm-3">
+										<div class="col-sm-9 form-group">
+											<label></label> <input type="text" placeholder="GPA"
+												class="form-control" name="gpa" formControlName="gpa">
+										</div>
+										<div class="col-sm-9 form-group">
+											<label>Start Year&Month</label> <input type="month"
+												placeholder="Start year and Month" class="form-control" name="startYearMonth" formControlName="startYearMonth">
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="col-sm-6 form-group">
+											<label>Upload College Official Transcript</label> <input
+												type="file" placeholder="">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Upload College degree</label> <input type="file"
+												placeholder="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<fieldset formGroupName="intermediate">
+					<label>Intermediate Education</label>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-12 form-group">
+											<label>College</label> <input type="text" placeholder=""
+												class="form-control" name="collegeName" formControlName="collegeName">
+
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Start Year&Month</label> <input type="month"
+												placeholder="" class="form-control" name="startYearMonth" formControlName="startYearMonth">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Start Year&Month</label> <input type="month"
+												placeholder="" class="form-control" name="endYearMonth" formControlName="endYearMonth">
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="col-lg-12 well">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="col">
+										<div class="col-sm-9 form-group">
+											<label>College Address</label>
+											<textarea placeholder="Enter Address Here.." rows="2"
+												class="form-control" name="collegeAddress" formControlName="collegeAddress"></textarea>
+										</div>
+									</div>
+									<div class="row col-sm-3">
+										<div class="col-sm-9 form-group">
+											<label></label> <input type="text" placeholder="Postal code"
+												class="form-control" name="postalCode" formControlName="postalCode">
+										</div>
+										<div class="col-sm-9 form-group">
+											<label></label> <input type="text" placeholder="Land Mark"
+												class="form-control" name="landMark" formControlName="landMark">
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="col-sm-6 form-group">
+											<label>Upload Marks List</label> <input type="file"
+												placeholder="">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Upload Intermediate Certificates</label> <input
+												type="file" placeholder="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</fieldset>
+					<div class="modal-footer">
+						<button href="#personal" data-toggle="pill" (click)="(id=1)"
+							type="button" class="btn btn-primary">Back</button>
+						<button type="submit" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-primary" href="#immi"
+							data-toggle="pill" (click)="onNext()">Next</button>
+					</div>
+					</fieldset>
+				</form>
+      </div>
+      <app-home-footer></app-home-footer>

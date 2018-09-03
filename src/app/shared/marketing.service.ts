@@ -10,6 +10,6 @@ constructor(private http: HttpClient) { }
 
 
 getMarketingData(): any {
-  return this.http.get('assets/marketingData.json');
+  return this.http.get('http://localhost:8082/marketings');
 }
 }

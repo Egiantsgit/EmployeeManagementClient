@@ -1,0 +1,187 @@
+<app-registernavbar></app-registernavbar>
+<div class="container">
+      <form [formGroup]="user" (ngSubmit)="saveUserInfo()">
+      <fieldset formGroupName="userPersonalDetails">	
+        <h3 align="left" class="col-sm-offset-0" style="color: skyblue">
+          Personal Information</h3>
+        <div class="container" id="personalInfo">
+          <div class="col-lg-12 well">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-3 form-group">
+                    <label>Name as in Passport</label> <input type="text"
+                      placeholder="First Name" class="form-control"
+                      formControlName="firstName">
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label></label> <input type="text" placeholder="Middle"
+                      class="form-control" formControlName="middleName">
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label></label> <input type="text" placeholder="Last Name"
+                      class="form-control" formControlName="lastName">
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label>Gender</label> <input type="text" placeholder="Gender"
+                      class="form-control" formControlName="gender">
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label>Date Of Birth</label> <input type="date"
+                      placeholder="date of Birth" class="form-control"
+                      formControlName="dateOfBirth">
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label>Nationality</label> <input type="text" placeholder=""
+                      class="form-control" formControlName="nationality">
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label>SSN</label> <input type="number" placeholder=""
+                      class="form-control" formControlName="ssn">
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label>Marital Status</label> <input type="text"
+                      placeholder="" class="form-control"
+                      formControlName="maritalStatus">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <fieldset formGroupName="primaryAddress">	
+        <div class="container">
+          <div class="col-lg-12 well">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-9 form-group">
+                    <label>Primary Contact Address in USA for NON US
+                      Citizen</label>
+                    <input type="text" placeholder="Line 1"
+                      class="form-control" formControlName="line1">
+                      <input type="text" placeholder="Line 2"
+                      class="form-control" formControlName="line2">
+                      <input type="text" placeholder="Line 3"
+                      class="form-control" formControlName="line3">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text" placeholder="City/Town"
+                      class="form-control" formControlName="city">
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text" placeholder="State"
+                      class="form-control" formControlName="state">
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text" placeholder="Postal Code"
+                      class="form-control" formControlName="postalCode">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text" placeholder="Phone"
+                      class="form-control" formControlName="phoneNo">
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text"
+                      placeholder="Alternate Phone (Optional)"
+                      class="form-control" formControlName="alternatePhoneNo">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </fieldset>
+        <fieldset formGroupName="secondaryAddress">	
+        <div class="container">
+          <div class="col-lg-12 well">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-9 form-group">
+                    <label>Contact Address in Home Country</label>
+                    <input type="text" placeholder="Line 1"
+                      class="form-control" formControlName="line1">
+                      <input type="text" placeholder="Line 2"
+                      class="form-control" formControlName="line2">
+                      <input type="text" placeholder="Line 3"
+                      class="form-control" formControlName="line3">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text" placeholder="City/Town"
+                      class="form-control" formControlName="city">
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text" placeholder="State"
+                      class="form-control" formControlName="state">
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text" placeholder="Postal Code"
+                      class="form-control" formControlName="postalCode">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text" placeholder="Phone"
+                      class="form-control" formControlName="phoneNo">
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <label></label> <input type="text"
+                      placeholder="Alternate Phone (Optional)"
+                      class="form-control" formControlName="alternatePhoneNo">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </fieldset>
+        <div class="container">
+          <div class="col-lg-12 well">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label>Mobile Number</label> <input type="text"
+                      placeholder="" class="form-control" formControlName="personalPhoneNo">
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label>Driving Licence or State Id</label> <input type="file"
+                      placeholder="Driving Licence" class="form-control" name="license">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label>Land Line</label> <input type="text" placeholder="Land Line"
+                      class="form-control" formControlName="workPhoneNo">
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label> Bank Statement </label> <input type="file"
+                      placeholder="Bank Statement" class="form-control" name="bankStatement">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <label>Email </label> <input type="text" placeholder="Email"
+                      class="form-control" formControlName="emailId">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button [disabled]="personalNextBtn" type="button" class="btn btn-primary"
+            href="#edu" data-toggle="pill" (click)="(id=2)">Next</button>
+        </div>
+      </fieldset>	
+      </form>
+    </div>
+<app-home-footer></app-home-footer>

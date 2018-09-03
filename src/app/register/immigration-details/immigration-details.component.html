@@ -1,0 +1,122 @@
+<app-registernavbar></app-registernavbar>
+<div class="container">
+      <form [formGroup]="user" (ngSubmit)="saveUserInfo()">
+      <fieldset formGroupName="userImmigrationDetails">
+      <h3 align="left" class="col-sm-offset-0" style="color: skyblue">Immigration
+      Details</h3>
+    <div class="container ">
+      <div class="col-lg-12 well">
+        <div class="row">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label>Country of Birth</label> <input type="text"
+                    placeholder="" class="form-control" name="countryOfBirth" formControlName="countryOfBirth">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label>Passport Expiry Date</label> <input type="text"
+                    placeholder="" class="form-control"
+                    name="passportExpiryDate" formControlName="passportExpiryDate">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label>Passport Issued Country</label> <input type="text"
+                    placeholder="" class="form-control"
+                    name="passportIssuedCountry" formControlName="passportIssuedCountry">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label>I-94 Number</label> <input type="text" placeholder=""
+                    class="form-control" name="i94Number" formControlName="i94Number">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label>Current Status</label> <input type="text"
+                    placeholder="" class="form-control"
+                    name="currentStatus" formControlName="currentStatus">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label>Current Status validity</label> <input type="text"
+                    placeholder="" class="form-control"
+                    name="currentStatusValidity" formControlName="currentStatusValidity">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label>OPT Start Date</label> <input type="date"
+                    placeholder="" class="form-control"
+                    name="optStartDate" formControlName="optStartDate">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label>OPT End Date</label> <input type="date" placeholder=""
+                    class="form-control" name="optEndDate" formControlName="optEndDate">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label>H1 Start Date</label> <input type="date"
+                    placeholder="" class="form-control"
+                    name="h1bStartDate" formControlName="h1bStartDate">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label>H1b End Ddte</label> <input type="date" placeholder=""
+                    class="form-control" name="h1bEndDate" formControlName="h1bEndDate">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label>Upload Passport</label> <input type="file"
+                    placeholder="" class="" name="uploadPassport">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label>Upload US visa</label> <input type="file"
+                    placeholder="" class="" name="uploadUSVisa">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label>Upload I-94 Document</label> <input type="file"
+                    placeholder="" class="" name="uploadI94Document">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label>Upload All I-20's</label> <input type="file"
+                    placeholder="" class="" name="uploadAllI20s">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <label>Upload Previous I797</label> <input type="file"
+                    placeholder="" class="" name="uploadPreviousI797">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button href="#edu" data-toggle="pill" (click)="(id=2)"
+        type="button" class="btn btn-primary">Back</button>
+      <button href="#immi"  type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-primary" href="#work"
+        data-toggle="pill" (click)="onNext()">Next</button>>
+    </div>
+    </fieldset>
+    </form>
+  </div>
+  <app-home-footer></app-home-footer>

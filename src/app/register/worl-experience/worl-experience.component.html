@@ -1,0 +1,88 @@
+<app-registernavbar></app-registernavbar>
+<div class="container">
+				<h3 align="left" class="col-sm-offset-0" style="color: skyblue">Work
+					Experience Details</h3>
+				<br>
+				<form [formGroup]="user" (ngSubmit)="saveUserInfo()">
+				<fieldset formGroupName="userWorkExperience">
+				<div class="container ">
+					<div class="col-lg-12 well">
+						<div class="row">
+							<form>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-6 form-group">
+											<label>Total Years Of Experience</label> <input type="text"
+												placeholder="Years and Months" class="form-control" name="totalExp" formControlName="totalExp">
+										</div>
+										<div class="col-sm-6 form-group">
+											<label>Field of Previous work Experience</label> <input
+												type="text" placeholder="Years and Months"
+												class="form-control" name="previousFieldOfExp" formControlName="previousFieldOfExp">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			
+					
+				<form [formGroup]="employeeForm">
+					<div formArrayName="itemRows">
+						<div
+						*ngFor="let itemrow of employeeForm.controls.itemRows.controls; let i=index"
+							[formGroupName]="i">
+							<h5 align="left" class="col-sm-3 form-group">
+								<b>Company Details #{{ i + 1 }}</b>
+							</h5>
+							<div class="container ">
+								<div class="col-lg-12 well">
+									<div class="row">
+											<div class="col-sm-12">
+												<div class="row">
+													<div class="col-sm-6 form-group">
+														<label>Company name</label> 
+														<input type="text"
+															placeholder="" class="form-control" name="companyName" formControlName="companyName">
+														
+								
+													</div>
+													<div class="col-sm-6 form-group">
+														<label>Start Year and Month</label> <input type="month"
+															placeholder="" class="form-control" name="startYear" formControlName="startYear">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-6 form-group">
+														<label>Company Location</label> <input type="text"
+															placeholder="" class="form-control" name="companyLocation" formControlName="companyLocation">
+
+													</div>
+													<div class="col-sm-6 form-group">
+														<label>Upload Experience Letter</label> <input type="file"
+															placeholder=""  formControlName="offerLetter">
+													</div>
+												</div>
+												<div style="margin-left:94%">
+													<button type="button" (click)="addNewRow()" class="btn btn-primary">+</button>
+													<button
+													*ngIf="employeeForm.controls.itemRows.controls.length > 1"
+													(click)="deleteRow(i)" class="btn btn-danger">-</button>
+												     </div>
+												</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				</fieldset>
+				<div class="modal-footer">
+					<button href="#immi" data-toggle="pill" (click)="(id=3)"
+						type="button" class="btn btn-primary">Back</button>
+					<button type="submit" class="btn btn-primary">Save</button>
+				</div>
+				</form>
+			</div>
+      <app-home-footer></app-home-footer>

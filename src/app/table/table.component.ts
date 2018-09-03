@@ -14,13 +14,14 @@ export class TableComponent implements OnInit {
   private sortingOrder;
     constructor(private martketingData: MarketingService) {
       this.columnDefs = [
-        {headerName: 'Call ID', field: 'callId'},
-        {headerName: 'Date', field: 'Date'},
-        {headerName: 'Vendor Name', field: 'vendorName'},
-        {headerName: 'Vendor Contact', field: 'vendorContact'},
-        {headerName: 'Vendor PhoneNumber', field: 'vendorPhoneNumber'},
+        {headerName: 'Call ID', field: 'callerId'},
+        {headerName: 'Date', field: 'date'},
+        {headerName: 'Vendor Name', field: 'vendorOrganizationName'},
+        {headerName: 'Vendor Contact', field: 'vendorContactPerson'},
+        {headerName: 'Vendor PhoneNumber', field: 'contactNumber'},
         {headerName: 'Client', field: 'client'},
         {headerName: 'Status', field: 'status'}
+        
     ];
     }
      onGridReady(params) {
