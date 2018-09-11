@@ -6,6 +6,7 @@ import {
   AuthService,
   GoogleLoginProvider
 } from 'angular5-social-login';
+
 import { DOCUMENT } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -68,9 +69,24 @@ export class LoginComponent implements OnInit {
            } else if ((response.uuid && response.userPersonalDetails && response.userEducationDetails && response.userImmigrationDetails && response.userWorkExperience) != null) {
               this.dataService.datafromLogin = response;
               this.router.navigate(['/home']);
-           } else {
+            }else if (response.userPersonalDetails==null)
+            {
+             this.dataService.datafromLogin = response;
+             this.router.navigate(['/PersonalDetails']);
+            } 
+            else if (response.userEducationDetails==null)
+            {
+             this.dataService.datafromLogin = response;
+             this.router.navigate(['/EducationDetails']);
+            }
+            else if (response.userImmigrationDetails==null)
+            {
+             this.dataService.datafromLogin = response;
+             this.router.navigate(['/ImmigrationDetails']);
+            }
+           else {
               this.dataService.datafromLogin = response;
-              this.router.navigate(['/register']);
+              this.router.navigate(['/WorlExperience']);
            }
           },
           error => {

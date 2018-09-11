@@ -39,6 +39,11 @@ import { TableComponent } from './table/table.component';
 import { EditProfileComponent } from './navbar/edit-profile/edit-profile.component';
 import { UpcomingEventsComponent } from './navigation/marketingnav/upcoming-events/upcoming-events.component';
 import { SubmitSearchCallComponent } from './navigation/marketingnav/submit-search-call/submit-search-call.component';
+import { EducationDetailsComponent } from './register/education-details/education-details.component';
+import { ImmigrationDetailsComponent } from './register/immigration-details/immigration-details.component';
+import { RegisternavbarComponent } from './register/registernavbar/registernavbar.component';
+import { PersonalDetailsComponent } from './register/personal-details/personal-details.component';
+import { WorlExperienceComponent } from './register/worl-experience/worl-experience.component';
 
 export function getAuthServiceConfigs() {
   const config = new AuthServiceConfig(
@@ -63,6 +68,10 @@ const appRoutes: Routes = [
   {path: 'timesheet', component: TimesheetComponent},
   {path: 'statusreport', component: StatusreportComponent},
   {path: 'edit-profile', component:EditProfileComponent},
+  {path: 'EducationDetails', component:EducationDetailsComponent},
+  {path: 'ImmigrationDetails', component:ImmigrationDetailsComponent},
+  {path: 'PersonalDetails', component:PersonalDetailsComponent},
+  {path: 'WorkExperience', component:WorlExperienceComponent},
 
   { path: '',
     redirectTo: '/login',
@@ -98,7 +107,12 @@ const appRoutes: Routes = [
     HomeFooterComponent,UpcomingEventsComponent,
     TableComponent,
     EditProfileComponent,
-    SubmitSearchCallComponent
+    SubmitSearchCallComponent,
+    EducationDetailsComponent,
+    ImmigrationDetailsComponent,
+    RegisternavbarComponent,
+    PersonalDetailsComponent,
+    WorlExperienceComponent
 ],
   imports: [
     BrowserModule,
